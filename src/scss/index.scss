@@ -1,0 +1,220 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import "./variables.scss";
+@import "./mixins.scss";
+
+@import "./about.scss";
+@import "./skills.scss";
+@import "./projects.scss";
+@import "./activity.scss";
+
+body{
+    background-color: $base-color;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    color: $main-font-color;
+    word-break: keep-all;
+    @include respond-to("small"){
+        font-size: 16px;
+    }
+}
+html, body, div, h1, h2, h3, h4, h5, h6, span, ol, ul, li, header, section, article, footer, nav, p, img{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::selection{
+        color: $main-color;
+        background-color: $base-sub-color;
+    }
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    color: $main-color;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    &:hover{
+        color: $point-color;
+    }
+    &::selection{
+        color: $point-color;
+        background-color: $base-color;
+    }
+}
+
+.wrap{
+    max-width: $wrap-width;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-to("small") {
+        width: 90%;
+    }
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: $base-sub-color;
+    // border: 1px solid salmon;
+    transition: all 0.3s;
+    overflow: hidden;
+    .nav{
+        max-width: $wrap-width;
+        height: $nav-height;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        // border: 1px solid red;
+        @include respond-to("small"){
+            justify-content: center;
+        }
+        .menu{
+            font-size: 0.9rem;
+            color: $main-color;
+            // border: 1px solid red;
+            display: flex;
+            position: relative;
+            right: -20px;
+            @include respond-to("small"){
+                right: 0;
+            }
+            @include respond-to("medium"){
+                right: 0;
+            }
+
+            &-item{
+                // border: 1px solid blue;
+                display: inline-block;
+                height: 100%;
+                line-height: $nav-height;
+                padding: 0 20px;
+                text-transform: uppercase;
+                font-weight: normal;
+                text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+
+                &__text{
+                    @include respond-to("small"){
+                        display: none;
+                    }
+                }
+            }
+            &-about{ @include icon($icon-code: '\e802', $icon-size: 0.9rem) }
+            &-skills{ @include icon($icon-code: '\f164', $icon-size: 0.9rem) }
+            &-project{ @include icon($icon-code: '\f15c', $icon-size: 0.9rem) }
+            &-activity{ @include icon($icon-code: '\e801', $icon-size: 0.9rem) }
+        }
+    }
+}
+
+
+.footer{
+    text-align: center;
+    padding: $ele-gap 0;
+    .browsers{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+    .browser-item{
+        // border: 1px solid red;
+        width: 30px;
+        margin: 0.7rem;
+        text-indent: 2rem;
+        overflow: hidden;
+        @include respond-to("small"){
+            margin: 0.3rem;
+        }
+    }
+    
+    .browser-chrome{ @include background('../../img/chrome.png'); }
+    .browser-firefox{ @include background('../../img/firefox.png'); }
+    .browser-opera{ @include background('../../img/opera.png'); }
+    .browser-safari{ @include background('../../img/safari.png'); }
+    .browser-edge{ @include background('../../img/edge.png'); }
+}
+
+.go-top{
+    // border: 1px solid red;
+    $go-top-size: 2.5rem;
+    @include icon($icon-code: '\f1d8', $icon-size: $go-top-size){
+        // border: 1px solid orange;
+        color: $point-color;
+        width: 100%;
+        line-height: $go-top-size;
+        text-align: center;
+    }
+
+    padding: 10px;
+    position: fixed;
+    bottom: $go-top-size;
+    right: $go-top-size;
+    height: $go-top-size;
+    width: $go-top-size;
+    line-height: $go-top-size;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &__sign{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 0.9rem;
+        font-weight: bold;
+        transform: scaleX(-1);
+        white-space: nowrap;
+        text-align: center;
+        // border: 1px solid blueviolet;
+        display: none;
+        @include respond-to("small"){
+            display: block;
+            width: $go-top-size;
+            height: $go-top-size;
+        }
+    }
+    &:hover{
+        transform: scaleX(-1);
+    }
+
+    @include respond-to("small"){
+        display: none;
+    }
+}
+
+.highlight{
+    background: linear-gradient(transparent 60%, $highlight-color 0%);
+}
+
+.display-block{
+    // display: block;
+    // transition: 3s;
+    height: auto;
+    transition: height 0.5s ease-in-out;
+}
+.box-shadow-add{
+    box-shadow: $common-box-shadow;
+    background-color: $base-sub-color;
+}
+
+@keyframes more-moving {
+    0% {
+        color: $point-color;
+    }
+    50% {
+        color: $red;
+    }
+    100% {
+        color: $point-color;
+    }
+}

@@ -1,0 +1,87 @@
+
+.about{
+    padding: $section-gap 0;
+    // border: 1px solid blueviolet;
+    background-color: $base-sub-color;
+    @include respond-to("small"){
+        padding: $ele-gap 0;
+    }
+    &__wrap{
+        display: flex;
+        max-width: $wrap-width;
+        margin: 0 auto;
+        // border: 1px solid salmon;
+    }
+
+    .profile{
+        width: 25%;
+        min-height: $wrap-width / 4;
+        box-shadow: $common-box-shadow;
+        text-indent: 25%;
+        overflow: hidden;
+        white-space: nowrap;
+        @include background('../../img/me7.png');
+        @include respond-to("small"){
+            display: none;
+        }
+    }
+    .intro{
+        width: 75%;
+        // border: 1px solid black;
+        min-height: $wrap-width / 4;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include respond-to("small"){
+            width: 100%;
+        }
+
+        &-title{
+            // border: 1px solid violet;
+            border-bottom: 1px solid #aaa;
+            padding:  .5rem 0 .5rem $ele-gap;
+            font-weight: bold;
+            text-shadow: 1px 1px #ccc;
+            font-size: 2rem;
+        
+            &__tag{
+                font-size: 1.1rem;
+                font-weight: normal;
+                text-shadow: none;
+            }
+        }
+
+        &-content{
+            height: 50%;
+            padding: 5px 0 5px $ele-gap;
+            // border: 1px solid green;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &__text{
+                // border: 1px solid green;
+                line-height: 1.5rem;
+            }
+            @include respond-to("small"){
+                padding-right: $ele-gap;
+            }
+        }
+    }
+    
+    .contact{
+        display: flex;
+        flex-direction: column;
+        // border: 1px solid salmon;
+        &-github, &-email{
+            position: relative;
+            left: -10px;
+            // border: 1px solid salmon;
+            width: fit-content;
+            padding: 3px 10px;
+            font-size: 1rem;
+        }
+        &-github{ @include icon($icon-code: '\f09b', $icon-size: 1.3rem); }
+        &-email{ @include icon($icon-code: '\e804', $icon-size: 1rem); }
+    }
+}
+

@@ -1,0 +1,24 @@
+{
+    "name": "portfolio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "start": "parcel src/index.html --open",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Seo-Hyung/Portfolio.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Seo-Hyung/Portfolio/issues"
+    },
+    "homepage": "https://github.com/Seo-Hyung/Portfolio#readme",
+    "dependencies": {
+        "node-sass": "^4.11.0",
+        "parcel-bundler": "^1.11.0"
+    }
+}

@@ -1,0 +1,83 @@
+
+@mixin respond-to($breakpoint) {
+    $raw-query: map-get($breakpoints, $breakpoint);
+    @if $raw-query {
+        $query: if(
+            type-of($raw-query) == 'string',
+            unquote($raw-query),
+            inspect($raw-query)
+        );
+    
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+            + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @content;
+}
+
+@mixin icon($icon-code, $icon-size){
+    &::before{
+        content: $icon-code;
+        font-family: fontello;
+        font-size: $icon-size;
+        padding-right: 6px;
+        // border: 1px solid red;
+        @content;
+    }
+}
+
+@mixin background($background-url){
+    background: url($background-url) no-repeat center center;
+    background-size: contain;
+    @content;
+}
+
+@mixin section-title{
+    text-align: center;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    // border: 1px solid black;
+    padding-bottom: 2rem;
+    &__bar{
+        display: inline-block;
+        width: $ele-gap * 2;
+        background-color: $main-color;
+        height: 2px;
+        margin-top: 2rem;
+    }
+    @include flex-center{
+        flex-direction: column;
+    }
+    @include respond-to("small"){
+        font-size: 1.5rem;
+        &__bar{
+            width: $ele-gap * 1.2;
+        }
+    }
+    @content;
+}
+
+@mixin date-style{
+    display: inline-block;
+    background-color: darken($point-color, 10);
+    padding: 2px 6px;
+    margin-left: 10px;
+    color: $white;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border-radius: 3px;
+    height: auto;
+    line-height: normal;
+    box-shadow: none;
+    border: 0;
+    cursor: auto;
+}

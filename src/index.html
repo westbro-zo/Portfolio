@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="westbro Portfolio" />
+    <meta property="og:description" content="junior Front-end Developer" />
+    <link rel="icon" href="../favicon.ico" />
+    <link href="../fontello/css/fontello.css" rel="stylesheet" />
+    <link href="../src/scss/index.scss" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="#about" class="menu-about menu-item">
+                        <span class="menu-item__text">about</span>
+                    </a></li>
+                <li><a href="#skills" class="menu-skills menu-item">
+                        <span class="menu-item__text">skills</span>
+                    </a></li>
+                <li><a href="#project" class="menu-project menu-item">
+                        <span class="menu-item__text">project</span>
+                    </a></li>
+                <li><a href="#activity" class="menu-activity menu-item">
+                        <span class="menu-item__text">activity</span>
+                    </a></li>
+            </ul>
+        </nav>
+        <div>
+    </header>
+    <section class="about" id="about">
+        <div class="about__wrap">
+            <article class="profile">Profile image</article>
+            <article class="intro">
+                <h1 class="intro-title">
+                    Seo-Hyung
+                    <span class="intro-title__tag">@westbro</span>
+                </h1>
+                <div class="intro-content">
+                    <p class="intro-content__text">
+                        <span class="highlight">JavaScript</span>와 <span class="highlight">React</span>를
+                        다루는 주니어 프론트엔드 개발자입니다.<br />
+                    </p>
+
+                    <div class="contact">
+                        <a class="contact-github" href="https://github.com/Seo-Hyung" target="_blank">
+                            <span class="contact__address">github.com/Seo-Hyung</span>
+                        </a>
+                        <a class="contact-email" href="#">
+                            <span class="contact__address">westbro00@naver.com</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+
+    <main class="wrap">
+        <section class="skills" id="skills">
+            <h2 class="skills-title">
+                My Skills
+                <span class="skills-title__bar"></span>
+            </h2>
+            <article class="skills-skill">
+                <div class="skills-subtitle">
+                    <img src="../img/html.png" alt="" class="skills-logo" />
+                    <h3 class="skills-subtitle__text">HTML5+</h3>
+                </div>
+                <ul class="skills-content">
+                    <li>ES2015+ 에 대한 이해</li>
+                    <li>JQuery 없이 DOM api를 다룰 수 있음</li>
+                    <li>webpack, parcel 번들러에 대한 이해</li>
+                    <li>babel, polyfill 크로스브라우징에 대한</li>
+                    <li>vanilla js를 이용해 쇼핑몰 프로젝트 구현</li>
+                </ul>
+            </article>
+            <article class="skills-skill">
+                <div class="skills-subtitle">
+                    <img src="../img/js.png" alt="" class="skills-logo" />
+                    <h3 class="skills-subtitle__text">JavaScript</h3>
+                </div>
+                <ul class="skills-content">
+                    <li>ES2015+ 에 대한 이해</li>
+                    <li>JQuery 없이 DOM api를 다룰 수 있음</li>
+                    <li>webpack, parcel 번들러에 대한 이해</li>
+                    <li>웹 접근성</li>
+                </ul>
+            </article>
+            <article class="skills-skill">
+                <div class="skills-subtitle">
+                    <img src="../img/css.png" alt="" class="skills-logo" />
+                    <h3 class="skills-subtitle__text">CSS</h3>
+                </div>
+                <ul class="skills-content">
+                    <li>ES2015+ 에 대한 이해</li>
+                    <li>JQuery 없이 DOM api를 다룰 수 있음</li>
+                    <li>webpack, parcel 번들러에 대한 이해</li>
+                </ul>
+            </article>
+            <article class="skills-skill">
+                <div class="skills-subtitle">
+                    <img src="../img/react.png" alt="" class="skills-logo" />
+                    <h3 class="skills-subtitle__text">React</h3>
+                </div>
+                <ul class="skills-content">
+                    <li>ES2015+ 에 대한 이해</li>
+                    <li>JQuery 없이 DOM api를 다룰 수 있음</li>
+                    <li>webpack, parcel 번들러에 대한 이해</li>
+                </ul>
+            </article>
+            <article class="skills-skill">
+                <div class="skills-subtitle">
+                    <img src="../img/sass.png" alt="" class="skills-logo" />
+                    <h3 class="skills-subtitle__text">Sass</h3>
+                </div>
+                <ul class="skills-content">
+                    <li>ES2015+ 에 대한 이해</li>
+                    <li>JQuery 없이 DOM api를 다룰 수 있음</li>
+                    <li>webpack, parcel 번들러에 대한 이해</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 프로젝트 -->
+
+        <section class="projects" id="project">
+            <h2 class="projects-title">Projects</h2>
+            <article class="projects-project projects-project-exeption">
+                <h3 class="projects-subtitle">CGV Clone Project
+                    <span class="projects-subtitle__bar"></span>
+                </h3>
+                <div class="projects-basic-info">
+                    <ul class="techs">
+                        <li class="techs-item">React</li>
+                        <li class="techs-item">React-Router</li>
+                        <li class="techs-item">Context-api</li>
+                        <li class="techs-item">RESTful-api</li>
+                        <li class="techs-item">axios</li>
+                        <li class="techs-item">CSS module</li>
+                        <li class="techs-item">SCSS</li>
+                        <li class="techs-item">Responsive</li>
+                        <li class="techs-item">HTML5</li>
+                        <li class="techs-item">Git & Github</li>
+                        <li class="techs-item">SPA</li>
+                        <li class="techs-item">Team-Project</li>
+                        <li class="techs-item">2018.12.03-12.21</li>
+                    </ul>
+                </div>
+                <div class="projects-image-cgv">
+                    <img src="../img/cgv-web.PNG" alt="cgv web screenshot" class="projects-image" />
+                    <div class="image-cover-cgv">
+                        <span class="image-cover-cgv__btn">VIEW DETAIL</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 쇼핑몰 프로젝트 -->
+            <article class="projects-project">
+                <h3 class="projects-subtitle">Shopping-mall Project
+
+                    <span class="projects-subtitle__bar"></span>
+                </h3>
+                <!-- <div class="article__subtitle">
+                    <h4 class="article__subtitle-text">Shopping mall Project</h4>
+                </div> -->
+                <div class="projects-basic-info">
+                    <ul class="techs">
+                        <li class="techs-item">JavaScript</li>
+                        <li class="techs-item">Vanilla</li>
+                        <li class="techs-item">HTML5</li>
+                        <li class="techs-item">SCSS</li>
+                        <li class="techs-item">RESTful-api</li>
+                        <li class="techs-item">Parcel</li>
+                        <li class="techs-item">Responsive</li>
+                        <li class="techs-item">2018.11.07-11.11</li>
+                    </ul>
+                </div>
+                <div class="projects-image-mall">
+                    <img src="../img/mall-web.PNG" alt="cgv web screenshot" class="projects-image" />
+                    <div class="image-cover-mall">
+                        <span class="image-cover-mall__btn">VIEW DETAIL</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="activity" id="activity">
+            <h2 class="activity-title">Activity
+                <span class="activity-title__bar"></span>
+            </h2>
+            <article class="activity-activity">
+                <img src="../img/siots.jpg" alt="" class="activity-image">
+                <div class="activity-content">
+                    <div class="activity-subtitle">
+                        <h3 class="activity-subtitle__text">Siots Study</h3>
+                        <span class="activity-date">2019.01 ~ing</span>
+                    </div>
+                    <div class="activity-detail">
+                        <p>프론트엔드 개발자의 꿈을 가진 4명이 모여 함께하는 개발 스터디<br />
+                            화합이 좋아 계속해서 함께하고 있다.
+                        </p>
+                    </div>
+                    <ul class="activity-links">
+                        <li><a class="activity-links-gitlab" href="#">Visit Siots Gitlab</a></li>
+                        <li><a class="activity-links-trello" href="#">Visit Siots Trello</a></li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <aside class="go-top">
+            <span class="go-top__sign">go top!</span>
+        </aside>
+    </main>
+    </div>
+
+    <footer class="footer">
+        I'm looking for a job.
+        If you like my portfolio, <a href="#about">contact</a> me.<br />
+        This page is made with vanillaJS, parcel, SCSS, BEM, grid & flex, fontello. <br />
+        <ul class="browsers">
+            <li class="browser-chrome browser-item">chrome</li>
+            <li class="browser-opera browser-item">opera</li>
+            <li class="browser-firefox browser-item">firefox</li>
+            <li class="browser-safari browser-item">safari</li>
+            <li class="browser-edge browser-item">edge</li>
+        </ul><br />
+        Copyright 2019 Seohyung Cho
+    </footer>
+    <script src="../src/index.js"></script>
+</body>
+
+</html>

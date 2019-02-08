@@ -1,0 +1,72 @@
+
+.activity{
+    margin: $section-gap 0;
+    // border: 1px solid salmon;
+    @include respond-to("small"){
+        margin: $ele-gap 0;
+    }
+    &-title{
+        // border: 1px solid red;
+        @include section-title;
+    }
+    &-activity{
+        // border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem 0;
+        width: 100%;
+        @include respond-to("small"){
+            flex-direction: column;
+        }
+    }
+    &-image{
+        width: 40%;
+        height: 100%;
+        box-shadow: $common-box-shadow;
+        @include respond-to("small"){
+            width: 100%;
+        }
+    }
+    &-content{
+        width: 60%;
+        margin-left: $ele-gap;
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        @include respond-to("small"){
+            width: 100%;
+            margin-left: 0;
+            // text-align: center;
+        }
+
+    }
+    &-subtitle{
+        // border: 1px solid red;
+        &__text{
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 1.4rem;
+            // border: 1px solid red;
+        }
+    }
+    &-date{
+        // border: 1px solid red;
+        @include date-style;
+    }
+    &-detail{
+        // border: 1px solid red;
+    }
+    &-links{
+        // border: 1px solid red;
+        margin: 10px 0;
+        &-item{
+        }
+        &-gitlab{
+            @include icon($icon-code: '\f296', $icon-size: 0.9rem);   
+        }
+        &-trello{
+            @include icon($icon-code: '\f0db', $icon-size: 0.9rem);   
+        }
+    }
+}

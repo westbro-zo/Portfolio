@@ -1,0 +1,42 @@
+.skills{
+    margin: $section-gap 0;
+    display: grid;
+    grid-gap: $ele-gap;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    // border: 1px solid salmon;
+    @include respond-to("small"){
+        margin: $ele-gap 0;
+    }
+    &-title{
+        // border: 1px solid salmon;
+        grid-column: 1 / -1;
+        @include section-title{
+            padding-bottom: 0;
+        };
+    }
+    
+    &-skill{
+        grid-column: span 1;
+        // border: 1px solid blue;
+        border-bottom: 1px solid #ddd;
+    }
+    &-logo{
+        height: 4rem;
+        // border: 1px solid salmon;
+    }
+    &-subtitle{
+        // border: 1px solid salmon;
+        text-align: center;
+        font-size: 1.4rem;
+        padding: 5px;
+        &__text{
+            // border: 1px solid violet;
+            // display: block;
+        }
+    }
+    &-content{
+        // border: 1px solid red;
+        padding: $ele-gap 0;
+        text-align: center;
+    }
+}
