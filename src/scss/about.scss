@@ -20,7 +20,7 @@
         text-indent: 25%;
         overflow: hidden;
         white-space: nowrap;
-        @include background('../../img/me7.png');
+        @include background('../../img/me.png');
         @include respond-to("small"){
             display: none;
         }
