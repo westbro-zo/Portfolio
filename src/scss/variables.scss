@@ -4,17 +4,18 @@ $red: #e74c3c;
 
 $base-color: #fff;
 $base-sub-color: #EFEFEF;
+$base-sub-color: #F3F3F3;
 
-$main-color: darken( #CE7182, 20);
-$main-color: darken( #BC8F8F, 5);
+// $main-color: darken( #BC8F8F, 5);
+$main-color: darken( #CE7182, 2);
 
-$sub-color: #80828A;
 
 $point-color: #828399;
 $point-color: #9697A3;
 $point-color: #ABCEE2;
 
 $main-font-color: #353036;
+$sub-font-color: #80828A;
 $highlight-color: lighten( #C0D2DC, 5);
 
 // 크기

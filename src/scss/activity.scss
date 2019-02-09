@@ -63,10 +63,10 @@
         &-item{
         }
         &-gitlab{
-            @include icon($icon-code: '\f296', $icon-size: 0.9rem);   
+            @include icon($icon-code: '\e802', $icon-size: 0.9rem);   
         }
         &-trello{
-            @include icon($icon-code: '\f0db', $icon-size: 0.9rem);   
+            @include icon($icon-code: '\e802', $icon-size: 0.9rem);   
         }
     }
 }

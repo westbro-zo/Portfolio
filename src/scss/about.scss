@@ -38,16 +38,18 @@
 
         &-title{
             // border: 1px solid violet;
-            border-bottom: 1px solid #aaa;
+            border-bottom: 1px solid $sub-font-color;
             padding:  .5rem 0 .5rem $ele-gap;
             font-weight: bold;
-            text-shadow: 1px 1px #ccc;
+            // text-shadow: 1px 1px #ccc;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
             font-size: 2rem;
         
             &__tag{
-                font-size: 1.1rem;
+                font-size: 1rem;
                 font-weight: normal;
                 text-shadow: none;
+                color: $sub-font-color;
             }
         }
 
@@ -81,7 +83,7 @@
             font-size: 1rem;
         }
         &-github{ @include icon($icon-code: '\f09b', $icon-size: 1.3rem); }
-        &-email{ @include icon($icon-code: '\e804', $icon-size: 1rem); }
+        &-email{ @include icon($icon-code: '\f0e0', $icon-size: 1rem); }
     }
 }
 

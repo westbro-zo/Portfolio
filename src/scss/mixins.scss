@@ -80,4 +80,8 @@
     box-shadow: none;
     border: 0;
     cursor: auto;
+    @include respond-to("small"){
+        font-size: 0.7rem;
+        padding: 0 4px;
+    }
 }

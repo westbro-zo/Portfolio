@@ -1,5 +1,5 @@
 {
-  "name": "skill",
+  "name": "",
   "css_prefix_text": "icon-",
   "css_use_suffix": false,
   "hinting": true,
@@ -9,37 +9,13 @@
     {
       "uid": "d73eceadda1f594cec0536087539afbf",
       "css": "heart",
-      "code": 59393,
+      "code": 59392,
       "src": "fontawesome"
     },
     {
       "uid": "8b80d36d4ef43889db10bc1f0dc9a862",
       "css": "user",
-      "code": 59394,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "c08a1cde48d96cba21d8c05fa7d7feb1",
-      "css": "doc-text-inv",
-      "code": 61788,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "26613a2e6bc41593c54bead46f8c8ee3",
-      "css": "file-code",
-      "code": 61897,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "9755f76110ae4d12ac5f9466c9152031",
-      "css": "book",
-      "code": 59392,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "d61be837c725a299b432dcbee2ecdae6",
-      "css": "certificate",
-      "code": 61603,
+      "code": 59393,
       "src": "fontawesome"
     },
     {
@@ -49,33 +25,21 @@
       "src": "fontawesome"
     },
     {
-      "uid": "44e04715aecbca7f266a17d5a7863c68",
-      "css": "plus",
-      "code": 59395,
-      "src": "fontawesome"
-    },
-    {
       "uid": "0f6a2573a7b6df911ed199bb63717e27",
       "css": "github-circled",
       "code": 61595,
       "src": "fontawesome"
     },
     {
-      "uid": "a17986e457f3d85f26c9c240dfd6a4ba",
-      "css": "mail",
-      "code": 59396,
-      "src": "mfglabs"
-    },
-    {
-      "uid": "0d08dbb1dd648a43bdea81b7e6c9e036",
-      "css": "location",
-      "code": 59397,
+      "uid": "0ddd3e8201ccc7d41f7b7c9d27eca6c1",
+      "css": "link",
+      "code": 59394,
       "src": "fontawesome"
     },
     {
-      "uid": "38575a803c4da31ce20d77e1e1236bcb",
-      "css": "paper-plane-2",
-      "code": 61912,
+      "uid": "d650df2fd7c4e27d9185d90a1c12a881",
+      "css": "space-shuttle",
+      "code": 61847,
       "src": "fontawesome"
     },
     {
@@ -85,40 +49,10 @@
       "src": "fontawesome"
     },
     {
-      "uid": "d2c6b59d9a239140cb76be0627480855",
-      "css": "dot",
-      "code": 59398,
-      "src": "entypo"
-    },
-    {
-      "uid": "47a1f80457068fbeab69fdb83d7d0817",
-      "css": "youtube-play",
-      "code": 61802,
+      "uid": "ccc2329632396dc096bb638d4b46fb98",
+      "css": "mail-alt",
+      "code": 61664,
       "src": "fontawesome"
-    },
-    {
-      "uid": "12a80769cc7ac08e986deeafbe553054",
-      "css": "mouse-pointer",
-      "code": 62021,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "897cd776b90c71cb80b467fd9f509775",
-      "css": "youtube",
-      "code": 62229,
-      "src": "modernpics"
-    },
-    {
-      "uid": "7cca4643f1e938c673e91c0c78058ddf",
-      "css": "gitlab",
-      "code": 62102,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "a58a5236139282f6c7f906634233157a",
-      "css": "squares",
-      "code": 59399,
-      "src": "modernpics"
     },
     {
       "uid": "53dd31a6cc6438192b2d7b09b1c1dd45",
@@ -127,9 +61,57 @@
       "src": "fontawesome"
     },
     {
+      "uid": "7cca4643f1e938c673e91c0c78058ddf",
+      "css": "gitlab",
+      "code": 62102,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c5af9b4626c0f2fa6dc259f9f035b055",
+      "css": "safari",
+      "code": 62055,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "bd7fd67bed189448225cad0fe4ef3d7c",
+      "css": "chrome",
+      "code": 62056,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c97bfbcfb31e74be0653d8551c89a40f",
+      "css": "firefox",
+      "code": 62057,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "52f734427edaded2af2fc050ac5d3554",
+      "css": "opera",
+      "code": 62058,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "03957a1f03b5ae5dfac6e5027d893157",
+      "css": "edge",
+      "code": 62082,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "3dae5d2af2b99240c3c118e872f762f2",
+      "css": "plane",
+      "code": 59396,
+      "src": "typicons"
+    },
+    {
       "uid": "838db85de51df09e2d0c34a17dc30ff6",
       "css": "code",
-      "code": 59400,
+      "code": 59395,
+      "src": "websymbols"
+    },
+    {
+      "uid": "8da3ac534210aae9c0f0e13804c1df97",
+      "css": "cancel",
+      "code": 59397,
       "src": "websymbols"
     }
   ]

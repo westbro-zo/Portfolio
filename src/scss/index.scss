@@ -107,10 +107,10 @@ a{
                     }
                 }
             }
-            &-about{ @include icon($icon-code: '\e802', $icon-size: 0.9rem) }
+            &-about{ @include icon($icon-code: '\e801', $icon-size: 0.9rem) }
             &-skills{ @include icon($icon-code: '\f164', $icon-size: 0.9rem) }
-            &-project{ @include icon($icon-code: '\f15c', $icon-size: 0.9rem) }
-            &-activity{ @include icon($icon-code: '\e801', $icon-size: 0.9rem) }
+            &-project{ @include icon($icon-code: '\e803', $icon-size: 0.9rem) }
+            &-activity{ @include icon($icon-code: '\e800', $icon-size: 0.9rem) }
         }
     }
 }
@@ -141,50 +141,34 @@ a{
     .browser-opera{ @include background('../../img/opera.png'); }
     .browser-safari{ @include background('../../img/safari.png'); }
     .browser-edge{ @include background('../../img/edge.png'); }
+
+    .copyright{ @include icon($icon-code: '\f1f9', $icon-size: 0.9rem) }
 }
 
 .go-top{
+    $go-top-size: 2.3rem;
     // border: 1px solid red;
-    $go-top-size: 2.5rem;
-    @include icon($icon-code: '\f1d8', $icon-size: $go-top-size){
-        // border: 1px solid orange;
-        color: $point-color;
-        width: 100%;
-        line-height: $go-top-size;
-        text-align: center;
-    }
-
     padding: 10px;
     position: fixed;
     bottom: $go-top-size;
     right: $go-top-size;
-    height: $go-top-size;
-    width: $go-top-size;
-    line-height: $go-top-size;
     cursor: pointer;
-    transition: 0.3s;
-
+    @include icon($icon-code: '\e804', $icon-size: $go-top-size){
+        color: $point-color;
+        padding: 0;
+        // border: 1px solid blue;
+    }
     &__sign{
         position: absolute;
-        top: 0;
+        top: calc( 50% - 0.4rem );
         left: 0;
         width: 100%;
-        height: 100%;
-        font-size: 0.9rem;
-        font-weight: bold;
-        transform: scaleX(-1);
+        font-size: 0.8rem;
         white-space: nowrap;
         text-align: center;
+        font-weight: bold;
         // border: 1px solid blueviolet;
         display: none;
-        @include respond-to("small"){
-            display: block;
-            width: $go-top-size;
-            height: $go-top-size;
-        }
-    }
-    &:hover{
-        transform: scaleX(-1);
     }
 
     @include respond-to("small"){
@@ -192,19 +176,22 @@ a{
     }
 }
 
+.rotate{
+    transition: all 1.5s;
+    transform: rotateZ(360deg);
+}
+
 .highlight{
     background: linear-gradient(transparent 60%, $highlight-color 0%);
 }
 
-.display-block{
-    // display: block;
-    // transition: 3s;
-    height: auto;
-    transition: height 0.5s ease-in-out;
-}
 .box-shadow-add{
     box-shadow: $common-box-shadow;
     background-color: $base-sub-color;
+}
+
+.noscroll{
+    overflow:hidden;
 }
 
 @keyframes more-moving {
