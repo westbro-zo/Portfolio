@@ -38,7 +38,7 @@
 
         &-title{
             // border: 1px solid violet;
-            border-bottom: 1px solid $sub-font-color;
+            border-bottom: 1px solid lighten($sub-font-color, 20);
             padding:  .5rem 0 .5rem $ele-gap;
             font-weight: bold;
             // text-shadow: 1px 1px #ccc;

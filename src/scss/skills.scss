@@ -4,15 +4,21 @@
     grid-gap: $ele-gap;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     // border: 1px solid salmon;
+    font-size: inherit;
     @include respond-to("small"){
         margin: $ele-gap 0;
     }
     &-title{
         // border: 1px solid salmon;
         grid-column: 1 / -1;
+        margin-bottom: $ele-gap * 0.5;
         @include section-title{
             padding-bottom: 0;
         };
+        @include respond-to("small"){
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
     }
     
     &-skill{
@@ -23,6 +29,9 @@
     &-logo{
         height: 4rem;
         // border: 1px solid salmon;
+        @include respond-to("small"){
+            height: 3.3rem;
+        }
     }
     &-subtitle{
         // border: 1px solid salmon;
@@ -33,10 +42,16 @@
             // border: 1px solid violet;
             // display: block;
         }
+        @include respond-to("small"){
+            font-size: 1.1rem;
+        }
     }
     &-content{
         // border: 1px solid red;
         padding: $ele-gap 0;
         text-align: center;
+        @include respond-to("small"){
+            padding: 2rem 0;
+        }
     }
 }

@@ -15,7 +15,7 @@ body{
     color: $main-font-color;
     word-break: keep-all;
     @include respond-to("small"){
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 html, body, div, h1, h2, h3, h4, h5, h6, span, ol, ul, li, header, section, article, footer, nav, p, img{
@@ -76,6 +76,7 @@ a{
         // border: 1px solid red;
         @include respond-to("small"){
             justify-content: center;
+            height: $nav-height * 0.9;
         }
         .menu{
             font-size: 0.9rem;
@@ -101,6 +102,11 @@ a{
                 font-weight: normal;
                 text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
 
+                @include respond-to("small"){
+                    line-height: $nav-height * 0.9;
+                    
+                }
+
                 &__text{
                     @include respond-to("small"){
                         display: none;
@@ -119,6 +125,7 @@ a{
 .footer{
     text-align: center;
     padding: $ele-gap 0;
+    color: $sub-font-color;
     .browsers{
         // border: 1px solid red;
         display: flex;
@@ -194,12 +201,13 @@ a{
     overflow:hidden;
 }
 
+
 @keyframes more-moving {
     0% {
         color: $point-color;
     }
     50% {
-        color: $red;
+        color: $main-color;
     }
     100% {
         color: $point-color;
