@@ -46,13 +46,13 @@
     font-size: 1.8rem;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
     // border: 1px solid black;
-    padding-bottom: $ele-gap * 1.5;
+    padding-bottom: $ele-gap * 1.6;
     &__bar{
         display: inline-block;
         width: $ele-gap * 1.5;
         background-color: $main-color;
         height: 2px;
-        margin-top: 2rem;
+        margin-top: $ele-gap;
     }
     @include flex-center{
         flex-direction: column;

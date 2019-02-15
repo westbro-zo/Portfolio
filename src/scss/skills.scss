@@ -1,12 +1,12 @@
 .skills{
-    margin: $section-gap 0;
+    padding: $section-gap 0;
     display: grid;
     grid-gap: $ele-gap;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     // border: 1px solid salmon;
     font-size: inherit;
     @include respond-to("small"){
-        margin: $ele-gap 0;
+        padding: $ele-gap 0;
     }
     &-title{
         // border: 1px solid salmon;

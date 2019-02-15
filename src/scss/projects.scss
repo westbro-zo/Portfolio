@@ -1,12 +1,12 @@
 
 .projects{
-    margin: $section-gap 0;
+    padding: $section-gap 0;
     // visibility:hidden;
     // border: 1px solid salmon;
     // opacity: 0;
     // animation: fadeUp 0.3s ease forwards;
     @include respond-to("small"){
-        margin: $ele-gap 0;
+        padding: $ele-gap 0;
     }
     &-title{
         height: 0;

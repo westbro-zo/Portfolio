@@ -1,9 +1,9 @@
 
 .activity{
-    margin: $section-gap 0;
+    padding: $section-gap 0;
     // border: 1px solid salmon;
     @include respond-to("small"){
-        margin: $ele-gap 0;
+        padding: $ele-gap 0;
     }
     &-title{
         // border: 1px solid red;
@@ -22,9 +22,12 @@
     &-image{
         width: 40%;
         height: 100%;
+        margin: 0.5rem 0;
         box-shadow: $common-box-shadow;
         @include respond-to("small"){
             width: 100%;
+            margin-top: 0;
+            margin-bottom: 1rem;
         }
     }
     &-content{
@@ -45,7 +48,6 @@
         // border: 1px solid red;
         &__text{
             display: inline-block;
-            padding: 5px 0;
             font-size: 1.4rem;
             // border: 1px solid red;
         }
@@ -55,11 +57,17 @@
         @include date-style;
     }
     &-detail{
-        // border: 1px solid red;
+        &__text{
+            // border: 1px solid red;
+            margin: 0.7rem 0;
+            &:first-child{
+                font-weight: bold;
+            }
+        }
     }
     &-links{
         // border: 1px solid red;
-        margin: 10px 0;
+        // margin: 10px 0;
         &-item{
         }
         &-gitlab{

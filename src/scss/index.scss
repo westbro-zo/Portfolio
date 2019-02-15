@@ -42,7 +42,7 @@ a{
     }
     &::selection{
         color: $point-color;
-        background-color: $base-color;
+        background-color: $base-sub-color;
     }
 }
 
@@ -160,6 +160,7 @@ a{
     bottom: $go-top-size;
     right: $go-top-size;
     cursor: pointer;
+    z-index: 999;
     @include icon($icon-code: '\e804', $icon-size: $go-top-size){
         color: $point-color;
         padding: 0;
