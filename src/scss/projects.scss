@@ -130,32 +130,166 @@
             overflow: hidden;
             @include flex-center;
             &__close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
                 color: #aaa;
-                font-size: 2rem;
+                font-size: 2.5rem;
                 font-weight: bold;
-                border: 1px solid #ccc;
                 display: inline-block;
                 padding: 1rem 2rem;
-                border-radius: 3rem;
+                transition: 0.3s;
                 cursor: pointer;
-    
                 &:hover, &:focus {
                     color: black;
                 }
+
+                @include respond-to("small"){
+                    padding: 0.2rem 1rem;
+                    top: 0;
+                    right: 0;
+                    // border: 1px solid red;
+                }
+            }
+        }
+        &-header{
+            // border: 1px solid red;
+            margin-bottom: 1.5rem;
+            @include flex-center{
+                flex-direction: column;
+            };
+        }
+        &-title{
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            // border: 1px solid red;
+        }
+        &-subtitle{
+            font-size: 1.4rem;
+            margin: 1.3rem 0 0.5rem 0;
+            text-transform: uppercase;
+            // text-indent: 0.7rem;
+            @include icon($icon-code: '\e806', $icon-size: 1.3rem){
+                font-weight: normal;
+            };
+        }
+        &-basic{
+            color: lighten($sub-font-color, 10);
+            // color: $sub-font-color;
+        }
+        &-list{
+            // border: 1px solid red;
+            &__item{
+                @include icon($icon-code: '\e807', $icon-size: 1rem);
+            }
+        }
+        &-links{
+            display: flex;
+            // border: 1px solid red;
+            width: fit-content;
+            margin-left: 0.5rem;
+            &__link{
+                display: inline-block;
+                width: 1.5rem;
+                padding: 5px 10px;
+                // border: 1px solid blue;
+                white-space: nowrap;
+                overflow: hidden;
+                color: lighten($sub-font-color, 20);
+                &:hover{
+                    transform: scale(1.2);
+                }    
+            }
+            .site{
+                @include icon($icon-code: '\e802', $icon-size: 1.5rem){ position: relative; top: 3px; };
+            }
+            .youtube{
+                @include icon($icon-code: '\f144', $icon-size: 1.7rem);
+            }
+            .github{
+                @include icon($icon-code: '\f09b', $icon-size: 1.7rem);
             }
         }
         &-content {
-            background-color: #fefefe;
-            padding: 2rem;
+            position: relative;
+            background-color: $white;
+            padding: 3rem 5rem;
             width: 80%;
             height: 95%;
             // border: 1px solid red;
             overflow: auto;
             overflow-y: scroll;
-            text-align: center;
             @include respond-to("small"){
                 height: 80%;
                 width: 100%;
+                padding: 1rem 0.5rem;
+            }
+        }
+        &-role{
+            // border: 1px solid violet;
+            margin-top: 2rem;
+            @include flex-center;
+            @include respond-to("small"){
+                flex-direction: column;
+            }
+            &__text{
+                // border: 1px solid violet;
+                flex: 1.5;
+
+                &-item-odd{
+                    margin: 0.6rem 0.5rem 0.6rem 0;
+                }
+                &-item-even{
+                    margin: 0.6rem 0 1rem 0.6rem;
+                }
+            }
+            &__tag{
+                @include date-style{
+                    margin-left: 0;
+                    font-weight: bold;
+                    position: relative;
+                    top: -2px;
+                };
+            }
+            .bold{
+                font-weight: bold;
+            }
+        }
+        &-issue{
+            &__item{
+                font-weight: bold;
+                display: block;
+                margin: 1rem 0 0.3rem 0;
+            }
+            &__text{
+                margin: 0.6rem 0;
+            }
+        }
+        &-image{
+            &-mobile{
+                float: right;
+                width: 20%;
+                height: auto;
+                margin: 1.3rem 0 1.3rem 1rem;
+                box-shadow: $common-box-shadow;
+                @include respond-to("small"){
+                    // clear: both;
+                    float: none;
+                    width: 40%;
+                    margin: 4%;
+                }
+            }
+            &-web{
+                width: 100%;
+                // display: inline-block;
+                box-shadow: $common-box-shadow;
+                &__wrap{
+                    flex: 3;
+                    @include respond-to("small"){
+                        order: 1;
+                    }
+                }
+                
             }
         }
     }

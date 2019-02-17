@@ -5,9 +5,12 @@
 .icon-code:before { content: '\e803'; } /* '' */
 .icon-plane:before { content: '\e804'; } /* '' */
 .icon-cancel:before { content: '\e805'; } /* '' */
+.icon-pencil:before { content: '\e806'; } /* '' */
+.icon-dot:before { content: '\e807'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
 .icon-columns:before { content: '\f0db'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */
+.icon-play-circled:before { content: '\f144'; } /* '' */
 .icon-thumbs-up-alt:before { content: '\f164'; } /* '' */
 .icon-space-shuttle:before { content: '\f197'; } /* '' */
 .icon-copyright:before { content: '\f1f9'; } /* '' */
@@ -16,4 +19,5 @@
 .icon-firefox:before { content: '\f269'; } /* '' */
 .icon-opera:before { content: '\f26a'; } /* '' */
 .icon-edge:before { content: '\f282'; } /* '' */
+.icon-hashtag:before { content: '\f292'; } /* '' */
 .icon-gitlab:before { content: '\f296'; } /* '' */

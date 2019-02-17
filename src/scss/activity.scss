@@ -54,7 +54,10 @@
     }
     &-date{
         // border: 1px solid red;
-        @include date-style;
+        @include date-style{
+            position: relative;
+            top: -2px;
+        };
     }
     &-detail{
         &__text{

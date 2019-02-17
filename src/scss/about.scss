@@ -17,7 +17,7 @@
         width: 25%;
         min-height: $wrap-width / 4;
         box-shadow: $common-box-shadow;
-        text-indent: 25%;
+        text-indent: 100%;
         overflow: hidden;
         white-space: nowrap;
         @include background('../../img/me.jpg');
@@ -55,7 +55,7 @@
 
         &-content{
             height: 50%;
-            padding: 5px 0 5px $ele-gap;
+            padding: 5px 0 0 $ele-gap;
             // border: 1px solid green;
             display: flex;
             flex-direction: column;

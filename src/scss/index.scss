@@ -22,11 +22,8 @@ html, body, div, h1, h2, h3, h4, h5, h6, span, ol, ul, li, header, section, arti
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    &::selection{
-        color: $main-color;
-        background-color: $base-sub-color;
-    }
 }
+        
 
 ul, ol{
     list-style: none;
@@ -44,6 +41,11 @@ a{
         color: $point-color;
         background-color: $base-sub-color;
     }
+}
+
+::selection{
+    color: $main-color;
+    background-color: $base-sub-color;
 }
 
 .wrap{
@@ -126,6 +128,21 @@ a{
     text-align: center;
     padding: $ele-gap 0;
     color: $sub-font-color;
+    
+    .site-techs{
+        // border: 1px solid red;
+        text-transform: uppercase;
+        @include flex-center;
+        &-item{
+            &::after{
+                content: "·";
+                padding: 0 5px;
+            }
+            &:last-child::after{
+                display: none;
+            }
+        }
+    }
     .browsers{
         // border: 1px solid red;
         display: flex;

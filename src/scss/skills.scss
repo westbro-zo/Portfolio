@@ -24,6 +24,7 @@
     &-skill{
         grid-column: span 1;
         // border: 1px solid blue;
+        margin: 0 $ele-gap / 2;
         border-bottom: 1px solid #ddd;
     }
     &-logo{

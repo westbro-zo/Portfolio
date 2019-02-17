@@ -51,20 +51,32 @@ cgvMore.addEventListener("click", function (e) {
     e.preventDefault();
     cgvModal.classList.add('slide-animate');
     // document.body.classList.add('noscroll');
+    goTop.style.display = "none";
+
+    disableScrolling();
 })
 cgvClose.addEventListener("click", function () {
     cgvModal.classList.remove('slide-animate');
     // document.body.classList.remove('noscroll');
+    goTop.style.display = "block";
+
+    enableScrolling();
 })
 
 mallMore.addEventListener("click", function (e) {
     e.preventDefault();
     mallModal.classList.add('slide-animate');
     // document.body.classList.add('noscroll');
+    goTop.style.display = "none";
+
+    disableScrolling();
 })
 mallClose.addEventListener("click", function () {
     mallModal.classList.remove('slide-animate');
     // document.body.classList.remove('noscroll');
+    goTop.style.display = "block";
+
+    enableScrolling();
 })
 
 
@@ -77,6 +89,18 @@ document.addEventListener("scroll", function () {
         header.classList.add("box-shadow-add");
     }
 })
+
+// scroll 막기
+function disableScrolling() {
+    var x = window.scrollX;
+    var y = window.scrollY;
+    window.onscroll = function () { window.scrollTo(x, y); };
+}
+// scroll 허용
+function enableScrolling() {
+    window.onscroll = function () { };
+}
+
 
 
 // 이스터에그
