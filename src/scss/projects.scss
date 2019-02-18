@@ -186,22 +186,23 @@
         &-links{
             display: flex;
             // border: 1px solid red;
-            width: fit-content;
-            margin-left: 0.5rem;
+            &__text{
+                @include readable-hidden;
+            }
             &__link{
                 display: inline-block;
-                width: 1.5rem;
-                padding: 5px 10px;
                 // border: 1px solid blue;
-                white-space: nowrap;
-                overflow: hidden;
+                padding: 0.5rem;
                 color: lighten($sub-font-color, 20);
                 &:hover{
                     transform: scale(1.2);
-                }    
+                }
             }
             .site{
-                @include icon($icon-code: '\e802', $icon-size: 1.5rem){ position: relative; top: 3px; };
+                @include icon($icon-code: '\e802', $icon-size: 1.5rem){ 
+                    position: relative; 
+                    top: 3px;
+                };
             }
             .youtube{
                 @include icon($icon-code: '\f144', $icon-size: 1.7rem);
@@ -225,44 +226,42 @@
                 padding: 1rem 0.5rem;
             }
         }
+
+        &__text{
+            // border: 1px solid violet;
+            margin: 0.6rem 0;
+            &-wrap{
+                flex: 1.5;
+                .odd{
+                    // border: 1px solid blue;
+                    margin-right: 0.7rem;
+                }
+                .even{
+                    // border: 1px solid blue;
+                    margin-left: 0.7rem;
+                }
+            }
+        }
+        &__tag{
+            @include date-style{
+                margin-left: 0;
+                font-weight: bold;
+                position: relative;
+                top: -2px;
+            };
+        }
+
         &-role{
             // border: 1px solid violet;
-            margin-top: 2rem;
             @include flex-center;
             @include respond-to("small"){
                 flex-direction: column;
             }
-            &__text{
-                // border: 1px solid violet;
-                flex: 1.5;
-
-                &-item-odd{
-                    margin: 0.6rem 0.5rem 0.6rem 0;
-                }
-                &-item-even{
-                    margin: 0.6rem 0 1rem 0.6rem;
-                }
-            }
-            &__tag{
-                @include date-style{
-                    margin-left: 0;
-                    font-weight: bold;
-                    position: relative;
-                    top: -2px;
-                };
-            }
+        }
+        &-issue, &-role{
+            margin-top: 1rem;
             .bold{
                 font-weight: bold;
-            }
-        }
-        &-issue{
-            &__item{
-                font-weight: bold;
-                display: block;
-                margin: 1rem 0 0.3rem 0;
-            }
-            &__text{
-                margin: 0.6rem 0;
             }
         }
         &-image{

@@ -314,15 +314,17 @@
     font-size: 1rem;
     padding-right: 6px; }
   .projects-modal-links {
-    display: flex;
-    width: fit-content;
-    margin-left: 0.5rem; }
+    display: flex; }
+    .projects-modal-links__text {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin: -1px;
+      clip: rect(0, 0, 0, 0); }
     .projects-modal-links__link {
       display: inline-block;
-      width: 1.5rem;
-      padding: 5px 10px;
-      white-space: nowrap;
-      overflow: hidden;
+      padding: 0.5rem;
       color: #b5b6bb; }
       .projects-modal-links__link:hover {
         transform: scale(1.2); }
@@ -356,50 +358,47 @@
         height: 80%;
         width: 100%;
         padding: 1rem 0.5rem; } }
+  .projects-modal__text {
+    margin: 0.6rem 0; }
+    .projects-modal__text-wrap {
+      flex: 1.5; }
+      .projects-modal__text-wrap .odd {
+        margin-right: 0.7rem; }
+      .projects-modal__text-wrap .even {
+        margin-left: 0.7rem; }
+  .projects-modal__tag {
+    display: inline-block;
+    background-color: #85b8d5;
+    padding: 2px 6px;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: normal;
+    border-radius: 3px;
+    height: auto;
+    line-height: normal;
+    box-shadow: none;
+    border: 0;
+    cursor: auto;
+    margin-left: 0;
+    font-weight: bold;
+    position: relative;
+    top: -2px; }
+    @media (max-width: 768px) {
+      .projects-modal__tag {
+        font-size: 0.7rem;
+        padding: 0 4px; } }
   .projects-modal-role {
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center; }
     @media (max-width: 768px) {
       .projects-modal-role {
         flex-direction: column; } }
-    .projects-modal-role__text {
-      flex: 1.5; }
-      .projects-modal-role__text-item-odd {
-        margin: 0.6rem 0.5rem 0.6rem 0; }
-      .projects-modal-role__text-item-even {
-        margin: 0.6rem 0 1rem 0.6rem; }
-    .projects-modal-role__tag {
-      display: inline-block;
-      background-color: #85b8d5;
-      padding: 2px 6px;
-      margin-left: 10px;
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: normal;
-      border-radius: 3px;
-      height: auto;
-      line-height: normal;
-      box-shadow: none;
-      border: 0;
-      cursor: auto;
-      margin-left: 0;
-      font-weight: bold;
-      position: relative;
-      top: -2px; }
-      @media (max-width: 768px) {
-        .projects-modal-role__tag {
-          font-size: 0.7rem;
-          padding: 0 4px; } }
-    .projects-modal-role .bold {
+  .projects-modal-issue, .projects-modal-role {
+    margin-top: 1rem; }
+    .projects-modal-issue .bold, .projects-modal-role .bold {
       font-weight: bold; }
-  .projects-modal-issue__item {
-    font-weight: bold;
-    display: block;
-    margin: 1rem 0 0.3rem 0; }
-  .projects-modal-issue__text {
-    margin: 0.6rem 0; }
   .projects-modal-image-mobile {
     float: right;
     width: 20%;
@@ -535,6 +534,9 @@
     font-size: 0.9rem;
     padding-right: 6px; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   background-color: #fff;
   font-family: 'Open Sans', sans-serif;
@@ -565,6 +567,10 @@ a {
     background-color: #f4f4f4; }
 
 ::selection {
+  color: #cb697b;
+  background-color: #f4f4f4; }
+
+::-moz-selection {
   color: #cb697b;
   background-color: #f4f4f4; }
 
@@ -621,7 +627,12 @@ a {
             line-height: 45px; } }
         @media (max-width: 768px) {
           .header .nav .menu-item__text {
-            display: none; } }
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            margin: -1px;
+            clip: rect(0, 0, 0, 0); } }
       .header .nav .menu-about::before {
         content: "";
         font-family: fontello;
@@ -704,6 +715,9 @@ a {
     padding-right: 6px;
     color: #ABCEE2;
     padding: 0; }
+  @media (max-width: 768px) {
+    .go-top {
+      display: none; } }
   .go-top__sign {
     position: absolute;
     top: calc( 50% - 0.4rem);
@@ -714,9 +728,6 @@ a {
     text-align: center;
     font-weight: bold;
     display: none; }
-  @media (max-width: 768px) {
-    .go-top {
-      display: none; } }
 
 .rotate {
   transition: all 1.5s;

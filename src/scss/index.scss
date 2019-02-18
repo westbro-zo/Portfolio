@@ -8,6 +8,9 @@
 @import "./projects.scss";
 @import "./activity.scss";
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: $base-color;
     font-family: 'Open Sans', sans-serif;
@@ -44,6 +47,10 @@ a{
 }
 
 ::selection{
+    color: $main-color;
+    background-color: $base-sub-color;
+}
+::-moz-selection {
     color: $main-color;
     background-color: $base-sub-color;
 }
@@ -111,7 +118,7 @@ a{
 
                 &__text{
                     @include respond-to("small"){
-                        display: none;
+                        @include readable-hidden;
                     }
                 }
             }
@@ -183,6 +190,10 @@ a{
         padding: 0;
         // border: 1px solid blue;
     }
+
+    @include respond-to("small"){
+        display: none;
+    }
     &__sign{
         position: absolute;
         top: calc( 50% - 0.4rem );
@@ -193,10 +204,6 @@ a{
         text-align: center;
         font-weight: bold;
         // border: 1px solid blueviolet;
-        display: none;
-    }
-
-    @include respond-to("small"){
         display: none;
     }
 }
