@@ -26,7 +26,10 @@ html, body, div, h1, h2, h3, h4, h5, h6, span, ol, ul, li, header, section, arti
     padding: 0;
     box-sizing: border-box;
 }
-        
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 ul, ol{
     list-style: none;
@@ -139,13 +142,15 @@ a{
     .site-techs{
         // border: 1px solid red;
         text-transform: uppercase;
-        @include flex-center;
+        @include flex-center{
+            flex-wrap: wrap;
+        };
         &-item{
-            &::after{
+            &::before{
                 content: "·";
                 padding: 0 5px;
             }
-            &:last-child::after{
+            &:first-child::before{
                 display: none;
             }
         }
@@ -184,7 +189,7 @@ a{
     bottom: $go-top-size;
     right: $go-top-size;
     cursor: pointer;
-    z-index: 999;
+    z-index: 9;
     @include icon($icon-code: '\e804', $icon-size: $go-top-size){
         color: $point-color;
         padding: 0;

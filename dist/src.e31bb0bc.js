@@ -114,6 +114,12 @@ var cgvCover = cgvImage.querySelector('.image-cover-cgv');
 var cgvMore = cgvImage.querySelector('.image-cover-cgv__btn');
 var cgvModal = document.querySelector('.projects-modal-cgv');
 var cgvClose = cgvModal.querySelector('.projects-modal-cgv__close');
+var cgvMvp = cgvModal.querySelector('.cgv-mvp');
+var cgvTech = cgvModal.querySelector('.cgv-tech');
+var cgvRole = cgvModal.querySelector('.cgv-role');
+var cgvMvpWrap = cgvModal.querySelector('.cgv-mvp__wrap');
+var cgvTechWrap = cgvModal.querySelector('.cgv-tech__wrap');
+var cgvRoleWrap = cgvModal.querySelector('.cgv-role__wrap');
 var mallImage = document.querySelector('.projects-image-mall');
 var mallCover = mallImage.querySelector('.image-cover-mall');
 var mallMore = mallImage.querySelector('.image-cover-mall__btn');
@@ -149,29 +155,48 @@ mallImage.addEventListener("mouseleave", function () {
 
 cgvMore.addEventListener("click", function (e) {
   e.preventDefault();
-  cgvModal.classList.add('slide-animate'); // document.body.classList.add('noscroll');
-
-  goTop.style.display = "none";
+  cgvModal.classList.add('slide-animate');
   disableScrolling();
 });
 cgvClose.addEventListener("click", function () {
-  cgvModal.classList.remove('slide-animate'); // document.body.classList.remove('noscroll');
-
-  goTop.style.display = "block";
+  cgvModal.classList.remove('slide-animate');
   enableScrolling();
 });
 mallMore.addEventListener("click", function (e) {
   e.preventDefault();
-  mallModal.classList.add('slide-animate'); // document.body.classList.add('noscroll');
-
-  goTop.style.display = "none";
+  mallModal.classList.add('slide-animate');
   disableScrolling();
 });
 mallClose.addEventListener("click", function () {
-  mallModal.classList.remove('slide-animate'); // document.body.classList.remove('noscroll');
-
-  goTop.style.display = "block";
+  mallModal.classList.remove('slide-animate');
   enableScrolling();
+});
+cgvMvp.addEventListener("click", function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (viewportWidth > 768) {} else {
+    cgvMvpWrap.classList.toggle('slide-animate2');
+    cgvTechWrap.classList.remove('slide-animate2');
+    cgvRoleWrap.classList.remove('slide-animate2'); // cgvMvpWrap.classList.toggle('give-height');
+  }
+});
+cgvTech.addEventListener("click", function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (viewportWidth > 768) {} else {
+    cgvTechWrap.classList.toggle('slide-animate2');
+    cgvMvpWrap.classList.remove('slide-animate2');
+    cgvRoleWrap.classList.remove('slide-animate2'); // cgvMvpWrap.classList.toggle('give-height');
+  }
+});
+cgvRole.addEventListener("click", function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (viewportWidth > 768) {} else {
+    cgvRoleWrap.classList.toggle('slide-animate2');
+    cgvMvpWrap.classList.remove('slide-animate2');
+    cgvTechWrap.classList.remove('slide-animate2'); // cgvMvpWrap.classList.toggle('give-height');
+  }
 }); // 헤더 바 그림자
 
 document.addEventListener("scroll", function () {
@@ -228,7 +253,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62935" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

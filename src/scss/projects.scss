@@ -84,7 +84,7 @@
     &-image{
         box-shadow: $common-box-shadow;
         // border: 1px solid blue;
-        width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
@@ -152,6 +152,7 @@
                 }
             }
         }
+
         &-header{
             // border: 1px solid red;
             margin-bottom: 1.5rem;
@@ -225,6 +226,14 @@
                 width: 100%;
                 padding: 1rem 0.5rem;
             }
+
+            .cgv-mvp__wrap, .cgv-tech__wrap, .cgv-role__wrap{
+                @include respond-to("small"){
+                    max-height: 0;
+                    overflow: hidden;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
         }
 
         &__text{
@@ -279,7 +288,7 @@
                 }
             }
             &-web{
-                width: 100%;
+                max-width: 100%;
                 // display: inline-block;
                 box-shadow: $common-box-shadow;
                 &__wrap{
@@ -289,6 +298,26 @@
                     }
                 }
                 
+            }
+            &-zenhub{
+                width: 80%;
+                height: 100%;
+                box-shadow: $common-box-shadow;
+                &__wrap{
+                    position: relative;
+                    width: 90%;
+                    display: flex;
+                    // border: 1px solid red;
+                    .under{
+                        // border: 1px solid green;
+                    }
+                    .over{
+                        position: absolute;
+                        top: 10%;
+                        right: 0;
+                        // border: 1px solid violet;
+                    }
+                }
             }
         }
     }
@@ -304,7 +333,6 @@
         background-color: rgba(0,0,0,0);
     }
     100%{
-        
         height: 100%;
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     }
@@ -323,4 +351,36 @@
         opacity: 1;
         transform: translateY(0);
     } 
+}
+
+@keyframes slide2 {
+    0% {
+        max-height: 0;
+    }
+    50% {
+        // transform: scaleY(1);    
+        max-height: 100%;
+    }
+    100%{
+        // transform: scaleY(1);    
+        max-height: fit-content;
+    }
+    // from{
+    //         height: 0;
+
+    // }
+    // to{
+    //         height: auto;
+
+    // }
+}
+
+.slide-animate2{
+    animation: slide2 1.5s ease forwards;
+}
+
+.give-height{
+    height: 100%;
+    overflow: visible;
+    // color: red;
 }

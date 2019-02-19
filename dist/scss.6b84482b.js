@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\..\\img\\me.jpg":[["me.6bcdc3db.jpg","../img/me.jpg"],"../img/me.jpg"],"./..\\..\\img\\chrome.png":[["chrome.94f028bb.png","../img/chrome.png"],"../img/chrome.png"],"./..\\..\\img\\firefox.png":[["firefox.baee5aec.png","../img/firefox.png"],"../img/firefox.png"],"./..\\..\\img\\opera.png":[["opera.197298a3.png","../img/opera.png"],"../img/opera.png"],"./..\\..\\img\\safari.png":[["safari.a7f0f461.png","../img/safari.png"],"../img/safari.png"],"./..\\..\\img\\edge.png":[["edge.67a62758.png","../img/edge.png"],"../img/edge.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\..\\img\\chrome.png":[["chrome.94f028bb.png","../img/chrome.png"],"../img/chrome.png"],"./..\\..\\img\\firefox.png":[["firefox.baee5aec.png","../img/firefox.png"],"../img/firefox.png"],"./..\\..\\img\\opera.png":[["opera.197298a3.png","../img/opera.png"],"../img/opera.png"],"./..\\..\\img\\safari.png":[["safari.a7f0f461.png","../img/safari.png"],"../img/safari.png"],"./..\\..\\img\\edge.png":[["edge.67a62758.png","../img/edge.png"],"../img/edge.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62935" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -10,11 +10,19 @@ const cgvMore = cgvImage.querySelector('.image-cover-cgv__btn');
 const cgvModal = document.querySelector('.projects-modal-cgv');
 const cgvClose = cgvModal.querySelector('.projects-modal-cgv__close');
 
+const cgvMvp = cgvModal.querySelector('.cgv-mvp');
+const cgvTech = cgvModal.querySelector('.cgv-tech');
+const cgvRole = cgvModal.querySelector('.cgv-role');
+const cgvMvpWrap = cgvModal.querySelector('.cgv-mvp__wrap');
+const cgvTechWrap = cgvModal.querySelector('.cgv-tech__wrap');
+const cgvRoleWrap = cgvModal.querySelector('.cgv-role__wrap');
+
 const mallImage = document.querySelector('.projects-image-mall');
 const mallCover = mallImage.querySelector('.image-cover-mall');
 const mallMore = mallImage.querySelector('.image-cover-mall__btn');
 const mallModal = document.querySelector('.projects-modal-mall');
 const mallClose = mallModal.querySelector('.projects-modal-mall__close');
+
 
 // go top
 goTop.addEventListener("mouseenter", function () {
@@ -50,33 +58,54 @@ mallImage.addEventListener("mouseleave", function () {
 cgvMore.addEventListener("click", function (e) {
     e.preventDefault();
     cgvModal.classList.add('slide-animate');
-    // document.body.classList.add('noscroll');
-    goTop.style.display = "none";
-
     disableScrolling();
 })
 cgvClose.addEventListener("click", function () {
     cgvModal.classList.remove('slide-animate');
-    // document.body.classList.remove('noscroll');
-    goTop.style.display = "block";
-
     enableScrolling();
 })
 
 mallMore.addEventListener("click", function (e) {
     e.preventDefault();
     mallModal.classList.add('slide-animate');
-    // document.body.classList.add('noscroll');
-    goTop.style.display = "none";
-
     disableScrolling();
 })
 mallClose.addEventListener("click", function () {
     mallModal.classList.remove('slide-animate');
-    // document.body.classList.remove('noscroll');
-    goTop.style.display = "block";
-
     enableScrolling();
+})
+
+cgvMvp.addEventListener("click", function () {
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+    } else {
+        cgvMvpWrap.classList.toggle('slide-animate2');
+        cgvTechWrap.classList.remove('slide-animate2');
+        cgvRoleWrap.classList.remove('slide-animate2');
+        // cgvMvpWrap.classList.toggle('give-height');
+    }
+})
+
+cgvTech.addEventListener("click", function () {
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+    } else {
+        cgvTechWrap.classList.toggle('slide-animate2');
+        cgvMvpWrap.classList.remove('slide-animate2');
+        cgvRoleWrap.classList.remove('slide-animate2');
+        // cgvMvpWrap.classList.toggle('give-height');
+    }
+})
+
+cgvRole.addEventListener("click", function () {
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+    } else {
+        cgvRoleWrap.classList.toggle('slide-animate2');
+        cgvMvpWrap.classList.remove('slide-animate2');
+        cgvTechWrap.classList.remove('slide-animate2');
+        // cgvMvpWrap.classList.toggle('give-height');
+    }
 })
 
 

@@ -20,7 +20,7 @@
         text-indent: 100%;
         overflow: hidden;
         white-space: nowrap;
-        @include background('../../img/me.jpg');
+        @include background('https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550603070/me.jpg');
         @include respond-to("small"){
             display: none;
         }
