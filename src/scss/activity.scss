@@ -1,6 +1,7 @@
 
 .activity{
     padding: $section-gap 0;
+    line-height: 1.8rem;
     // border: 1px solid salmon;
     @include respond-to("small"){
         padding: $ele-gap 0;
@@ -71,6 +72,7 @@
     &-links{
         // border: 1px solid red;
         // margin: 10px 0;
+        line-height: normal;
         &-item{
         }
         &-gitlab{

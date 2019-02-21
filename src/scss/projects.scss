@@ -166,13 +166,17 @@
             // border: 1px solid red;
         }
         &-subtitle{
+            // border: 1px solid red;
             font-size: 1.4rem;
-            margin: 1.3rem 0 0.5rem 0;
+            margin: 3rem 0 1rem 0;
             text-transform: uppercase;
             // text-indent: 0.7rem;
             @include icon($icon-code: '\e806', $icon-size: 1.3rem){
                 font-weight: normal;
             };
+            @include respond-to("small"){
+                margin: 1rem 0 0.5rem 0;
+            }
         }
         &-basic{
             color: lighten($sub-font-color, 10);
@@ -218,16 +222,18 @@
             padding: 3rem 5rem;
             width: 80%;
             height: 95%;
+            line-height: 1.9rem;
             // border: 1px solid red;
             overflow: auto;
             overflow-y: scroll;
             @include respond-to("small"){
                 height: 80%;
                 width: 100%;
-                padding: 1rem 0.5rem;
+                padding: 2rem;
             }
 
             .cgv-mvp__wrap, .cgv-tech__wrap, .cgv-role__wrap{
+                // border: 1px solid red;
                 @include respond-to("small"){
                     max-height: 0;
                     overflow: hidden;
@@ -235,19 +241,40 @@
                 }
             }
         }
+        &-temp{
+            width: 50%;
+            @include respond-to("small"){
+                width: 100%;
+            }
+            &__wrap{
+                // border: 1px solid pink;
+                @include flex-center;
+                @include respond-to("small"){
+                    flex-direction: column;
+                }
+            }
+        }
 
         &__text{
-            // border: 1px solid violet;
-            margin: 0.6rem 0;
+            margin: 1rem 0;
             &-wrap{
                 flex: 1.5;
+                // border: 1px solid violet;
                 .odd{
                     // border: 1px solid blue;
-                    margin-right: 0.7rem;
+                    margin-right: 1.5rem;
+                    @include respond-to("small"){
+                        margin-right: 0;
+                        
+                    }
                 }
                 .even{
                     // border: 1px solid blue;
-                    margin-left: 0.7rem;
+                    margin-left: 1.5rem;
+                    @include respond-to("small"){
+                        margin-left: 0;
+                        
+                    }
                 }
             }
         }
@@ -262,29 +289,35 @@
 
         &-role{
             // border: 1px solid violet;
-            @include flex-center;
-            @include respond-to("small"){
-                flex-direction: column;
-            }
-        }
-        &-issue, &-role{
-            margin-top: 1rem;
+            margin-top: 3rem;
             .bold{
                 font-weight: bold;
             }
+            @include flex-center;
+            @include respond-to("small"){
+                margin-top: 1rem;
+                flex-direction: column;
+            }
         }
+
         &-image{
             &-mobile{
-                float: right;
-                width: 20%;
-                height: auto;
-                margin: 1.3rem 0 1.3rem 1rem;
+                width: 47%;
+                height: 100%;
+                // border: 1px solid salmon;
                 box-shadow: $common-box-shadow;
-                @include respond-to("small"){
-                    // clear: both;
-                    float: none;
-                    width: 40%;
-                    margin: 4%;
+                &__wrap{
+                    width: 50%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    // border: 1px solid red;
+                    order: 1;
+                    @include respond-to("small"){
+                        width: 80%;
+                        order: 0;
+                        margin: 1.5rem 0;
+                    }
                 }
             }
             &-web{
@@ -295,27 +328,6 @@
                     flex: 3;
                     @include respond-to("small"){
                         order: 1;
-                    }
-                }
-                
-            }
-            &-zenhub{
-                width: 80%;
-                height: 100%;
-                box-shadow: $common-box-shadow;
-                &__wrap{
-                    position: relative;
-                    width: 90%;
-                    display: flex;
-                    // border: 1px solid red;
-                    .under{
-                        // border: 1px solid green;
-                    }
-                    .over{
-                        position: absolute;
-                        top: 10%;
-                        right: 0;
-                        // border: 1px solid violet;
                     }
                 }
             }

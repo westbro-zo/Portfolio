@@ -78,6 +78,7 @@
   display: grid;
   grid-gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  line-height: 1.8rem;
   font-size: inherit; }
   @media (max-width: 768px) {
     .skills {
@@ -298,7 +299,7 @@
     text-transform: uppercase; }
   .projects-modal-subtitle {
     font-size: 1.4rem;
-    margin: 1.3rem 0 0.5rem 0;
+    margin: 3rem 0 1rem 0;
     text-transform: uppercase; }
     .projects-modal-subtitle::before {
       content: "";
@@ -306,6 +307,9 @@
       font-size: 1.3rem;
       padding-right: 6px;
       font-weight: normal; }
+    @media (max-width: 768px) {
+      .projects-modal-subtitle {
+        margin: 1rem 0 0.5rem 0; } }
   .projects-modal-basic {
     color: #9b9ca2; }
   .projects-modal-list__item::before {
@@ -351,26 +355,45 @@
     padding: 3rem 5rem;
     width: 80%;
     height: 95%;
+    line-height: 1.9rem;
     overflow: auto;
     overflow-y: scroll; }
     @media (max-width: 768px) {
       .projects-modal-content {
         height: 80%;
         width: 100%;
-        padding: 1rem 0.5rem; } }
+        padding: 2rem; } }
     @media (max-width: 768px) {
       .projects-modal-content .cgv-mvp__wrap, .projects-modal-content .cgv-tech__wrap, .projects-modal-content .cgv-role__wrap {
         max-height: 0;
         overflow: hidden;
         border-bottom: 1px solid #ddd; } }
+  .projects-modal-temp {
+    width: 50%; }
+    @media (max-width: 768px) {
+      .projects-modal-temp {
+        width: 100%; } }
+    .projects-modal-temp__wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      @media (max-width: 768px) {
+        .projects-modal-temp__wrap {
+          flex-direction: column; } }
   .projects-modal__text {
-    margin: 0.6rem 0; }
+    margin: 1rem 0; }
     .projects-modal__text-wrap {
       flex: 1.5; }
       .projects-modal__text-wrap .odd {
-        margin-right: 0.7rem; }
+        margin-right: 1.5rem; }
+        @media (max-width: 768px) {
+          .projects-modal__text-wrap .odd {
+            margin-right: 0; } }
       .projects-modal__text-wrap .even {
-        margin-left: 0.7rem; }
+        margin-left: 1.5rem; }
+        @media (max-width: 768px) {
+          .projects-modal__text-wrap .even {
+            margin-left: 0; } }
   .projects-modal__tag {
     display: inline-block;
     background-color: #85b8d5;
@@ -394,27 +417,31 @@
         font-size: 0.7rem;
         padding: 0 4px; } }
   .projects-modal-role {
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
     align-items: center; }
+    .projects-modal-role .bold {
+      font-weight: bold; }
     @media (max-width: 768px) {
       .projects-modal-role {
+        margin-top: 1rem;
         flex-direction: column; } }
-  .projects-modal-issue, .projects-modal-role {
-    margin-top: 1rem; }
-    .projects-modal-issue .bold, .projects-modal-role .bold {
-      font-weight: bold; }
   .projects-modal-image-mobile {
-    float: right;
-    width: 20%;
-    height: auto;
-    margin: 1.3rem 0 1.3rem 1rem;
+    width: 47%;
+    height: 100%;
     box-shadow: 3px 1px 10px 0 rgba(0, 0, 0, 0.1); }
-    @media (max-width: 768px) {
-      .projects-modal-image-mobile {
-        float: none;
-        width: 40%;
-        margin: 4%; } }
+    .projects-modal-image-mobile__wrap {
+      width: 50%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      order: 1; }
+      @media (max-width: 768px) {
+        .projects-modal-image-mobile__wrap {
+          width: 80%;
+          order: 0;
+          margin: 1.5rem 0; } }
   .projects-modal-image-web {
     max-width: 100%;
     box-shadow: 3px 1px 10px 0 rgba(0, 0, 0, 0.1); }
@@ -423,18 +450,6 @@
       @media (max-width: 768px) {
         .projects-modal-image-web__wrap {
           order: 1; } }
-  .projects-modal-image-zenhub {
-    width: 80%;
-    height: 100%;
-    box-shadow: 3px 1px 10px 0 rgba(0, 0, 0, 0.1); }
-    .projects-modal-image-zenhub__wrap {
-      position: relative;
-      width: 90%;
-      display: flex; }
-      .projects-modal-image-zenhub__wrap .over {
-        position: absolute;
-        top: 10%;
-        right: 0; }
 
 @keyframes slide {
   0% {
@@ -475,7 +490,8 @@
   overflow: visible; }
 
 .activity {
-  padding: 60px 0; }
+  padding: 60px 0;
+  line-height: 1.8rem; }
   @media (max-width: 768px) {
     .activity {
       padding: 30px 0; } }
@@ -555,16 +571,18 @@
     margin: 0.7rem 0; }
     .activity-detail__text:first-child {
       font-weight: bold; }
-  .activity-links-gitlab::before {
-    content: "";
-    font-family: fontello;
-    font-size: 0.9rem;
-    padding-right: 6px; }
-  .activity-links-trello::before {
-    content: "";
-    font-family: fontello;
-    font-size: 0.9rem;
-    padding-right: 6px; }
+  .activity-links {
+    line-height: normal; }
+    .activity-links-gitlab::before {
+      content: "";
+      font-family: fontello;
+      font-size: 0.9rem;
+      padding-right: 6px; }
+    .activity-links-trello::before {
+      content: "";
+      font-family: fontello;
+      font-size: 0.9rem;
+      padding-right: 6px; }
 
 html {
   scroll-behavior: smooth; }

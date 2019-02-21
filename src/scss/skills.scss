@@ -4,6 +4,7 @@
     grid-gap: $ele-gap;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     // border: 1px solid salmon;
+    line-height: 1.8rem;
     font-size: inherit;
     @include respond-to("small"){
         padding: $ele-gap 0;

@@ -47,7 +47,7 @@
                 </h1>
                 <div class="intro-content">
                     <p class="intro-content__text">
-                        Front-end 개발이 좋아
+                        Front-end 개발을 좋아하고 깊이 배우고 싶습니다.
                     </p>
 
                     <div class="contact">
@@ -79,6 +79,7 @@
                 <ul class="skills-content">
                     <li>Semantic 마크업</li>
                     <li>웹접근성을 고려한 개발</li>
+                    <li>meta태그를 이해하고 SEO에 적용</li>
                 </ul>
             </article>
             <article class="skills-skill">
@@ -91,7 +92,6 @@
                     <li>순수 JS로 DOM api 다루기</li>
                     <li>REST api 클라이언트 개발 경험</li>
                     <li>Webpack, Parcel 번들러 이해</li>
-                    <li>VanillaJS로 쇼핑몰 구현</li>
                 </ul>
             </article>
             <article class="skills-skill">
@@ -166,7 +166,7 @@
                             <h4 class="projects-modal-title">
                                 CGV Clone Project
                             </h4>
-                            <span class="projects-modal-basic">2019.12 for 3 weeks</span>
+                            <span class="projects-modal-basic">2018.12 for 3 weeks</span>
                             <ul class="projects-modal-links">
                                 <li><a class="projects-modal-links__link site" href="https://cgv.netlify.com/"
                                         target="_blank" rel="noopener noreferrer">
@@ -184,33 +184,41 @@
                         <p>프론트엔드 개발자 2명, 백엔드 개발자 2명, iOS 개발자 3명, 디자이너 1명이서 함께 만든 CGV Clone 사이트.
                             영화 사이트의 MVP를 정하고 MVP를 기준으로 <a href="http://www.cgv.co.kr/" target="_blank"
                                 rel="noopener noreferrer">기존 CGV 사이트</a>를
-                            재디자인했다.</p>
-                        <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550603501/cgv-mobile-2.png"
-                            alt="CGV mobile screenshot" class="projects-modal-image-mobile" />
-                        <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550603503/cgv-mobile-1.png"
-                            alt="CGV mobile screenshot" class="projects-modal-image-mobile" />
-                        <h5 class="projects-modal-subtitle cgv-mvp">MVP</h5>
-                        <ul class="projects-modal-list cgv-mvp__wrap">
-                            <li class="projects-modal-list__item">로그인 / 로그아웃 / 회원가입</li>
-                            <li class="projects-modal-list__item">현재 상영작 & 개봉 예정작 무비차트 보이기</li>
-                            <li class="projects-modal-list__item">영화 & 극장 & 날짜 & 시간 & 좌석 선택해서 예매하기</li>
-                        </ul>
-                        <h5 class="projects-modal-subtitle cgv-tech">Used Tech</h5>
-                        <ul class="projects-modal-list cgv-tech__wrap">
-                            <li class="projects-modal-list__item">React</li>
-                            <li class="projects-modal-list__item">React-Router</li>
-                            <li class="projects-modal-list__item">ECMAScript 2015</li>
-                            <li class="projects-modal-list__item">Context API</li>
-                            <li class="projects-modal-list__item">axios</li>
-                            <li class="projects-modal-list__item">SCSS & CSS module</li>
-                            <li class="projects-modal-list__item">React Helmet</li>
-                            <li class="projects-modal-list__item">ESLint & Prettier</li>
-                            <li class="projects-modal-list__item">Git & Github & Zenhub</li>
-                        </ul>
+                            재디자인했다.
+                        </p>
+                        <div class="projects-modal-temp__wrap">
+                            <div class="projects-modal-image-mobile__wrap">
+                                <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550603501/cgv-mobile-2.png"
+                                    alt="CGV mobile screenshot" class="projects-modal-image-mobile" />
+                                <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550603503/cgv-mobile-1.png"
+                                    alt="CGV mobile screenshot" class="projects-modal-image-mobile" />
+                            </div>
+                            <div class="projects-modal-temp">
+                                <h5 class="projects-modal-subtitle cgv-mvp">MVP</h5>
+                                <ul class="projects-modal-list cgv-mvp__wrap">
+                                    <li class="projects-modal-list__item">로그인 / 로그아웃 / 회원가입</li>
+                                    <li class="projects-modal-list__item">현재 상영작 & 개봉 예정작 무비차트 보이기</li>
+                                    <li class="projects-modal-list__item">영화 & 극장 & 날짜 & 시간 & 좌석 선택해서 예매하기</li>
+                                </ul>
+                                <h5 class="projects-modal-subtitle cgv-tech">Used Tech</h5>
+                                <ul class="projects-modal-list cgv-tech__wrap">
+                                    <li class="projects-modal-list__item">React</li>
+                                    <li class="projects-modal-list__item">React-Router</li>
+                                    <li class="projects-modal-list__item">ECMAScript 2015</li>
+                                    <li class="projects-modal-list__item">Context API</li>
+                                    <li class="projects-modal-list__item">axios</li>
+                                    <li class="projects-modal-list__item">SCSS & CSS module</li>
+                                    <li class="projects-modal-list__item">React Helmet</li>
+                                    <li class="projects-modal-list__item">ESLint & Prettier</li>
+                                    <li class="projects-modal-list__item">Git & Github & Zenhub</li>
+                                </ul>
+                            </div>
+                        </div>
 
                         <h5 class="projects-modal-subtitle cgv-role">My role</h5>
 
                         <div class="cgv-role__wrap">
+
                             <p class="projects-modal__text">
                                 <span class=" projects-modal__tag">함께</span>
                                 팀원과 함께 필요한 Page와 Component를 적절히 나눠 설계했다. Component는 Container Component와
@@ -326,10 +334,140 @@
                 </div>
                 <div class="projects-modal-mall">
                     <div class="projects-modal-content">
+                        <div class="projects-modal-header">
+                            <h4 class="projects-modal-title">
+                                Shopping-mall Project
+                            </h4>
+                            <span class="projects-modal-basic">2018.11 for 5 days</span>
+                            <ul class="projects-modal-links">
+                                <li><a class="projects-modal-links__link site"
+                                        href="https://shopping-mall-westbro.netlify.com/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span class="projects-modal-links__text">Visit WebSite</span></a></li>
+                                <li><a class="projects-modal-links__link github"
+                                        href="https://github.com/Seo-Hyung/Shopping-mall-project" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <span class="projects-modal-links__text">Visit Github</span></a></li>
+                            </ul>
+                        </div>
                         <p>
-
-                            쇼핑멀
+                            Glitch 서버를 이용해 쇼핑몰을 만들었다.
                         </p>
+                        <div class="projects-modal-temp__wrap">
+                            <div class="projects-modal-image-mobile__wrap">
+                                <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550764219/mall-mobile.png"
+                                    alt="Shopping-mall mobile screenshot" class="projects-modal-image-mobile" />
+                                <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550764219/mall-mobile2.png"
+                                    alt="Shopping-mall mobile screenshot" class="projects-modal-image-mobile" />
+                            </div>
+                            <div class="projects-modal-temp">
+                                <h5 class="projects-modal-subtitle cgv-mvp">Implementation</h5>
+                                <ul class="projects-modal-list cgv-mvp__wrap">
+                                    <li class="projects-modal-list__item">로그인 / 로그아웃 / 회원가입</li>
+                                    <li class="projects-modal-list__item">제품 리스트 보이기</li>
+                                    <li class="projects-modal-list__item">제품 & 수량 선택해서 장바구니에 담기</li>
+                                    <li class="projects-modal-list__item">장바구니 목록에서 선택 후 주문하기</li>
+                                    <li class="projects-modal-list__item">주문내역 보기</li>
+                                </ul>
+                                <h5 class="projects-modal-subtitle cgv-tech">Used Tech</h5>
+                                <ul class="projects-modal-list cgv-tech__wrap">
+                                    <li class="projects-modal-list__item">Vanilla JS</li>
+                                    <li class="projects-modal-list__item">ECMAScript 2015</li>
+                                    <li class="projects-modal-list__item">REST API</li>
+                                    <li class="projects-modal-list__item">axios</li>
+                                    <li class="projects-modal-list__item">HTML5 & CSS3</li>
+                                    <li class="projects-modal-list__item">SPA</li>
+                                    <li class="projects-modal-list__item">Parcel</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h5 class="projects-modal-subtitle cgv-role">Issue</h5>
+
+                        <div class="cgv-role__wrap">
+
+                            <p class="projects-modal__text">
+                                <span class=" projects-modal__tag">개인</span>
+                                fragment 를 이용한 SPA 구현
+                            </p>
+
+                            <p class="projects-modal__text">
+                                <span class=" projects-modal__tag">개인</span>
+                                낙관적 업데이트 / 비관적 업데이트
+                            </p>
+
+                            <div class="projects-modal-role">
+                                <div class="projects-modal__text-wrap">
+                                    <p class="projects-modal__text odd bold">
+                                        <span class="projects-modal__tag">개인</span>
+                                        장바구니에 이미 담긴 제품 시 수량만 변경
+                                    </p>
+                                    <p class="projects-modal__text odd">
+                                        회원가입Form에 제어되는 컴포넌트를 이용해 비밀번호 확인란 일치 여부를 판단했다.
+                                    </p>
+                                    <p class="projects-modal__text odd">
+                                        회원가입을 하면 새로운 token을 할당받고, 로그인하면 서버로부터 token을 받아와 localStorage에 저장해 사용자가 서비스를 이용할
+                                        수
+                                        있게 구현했다.
+                                    </p>
+                                    <p class="projects-modal__text odd">
+                                        서버의 user list를 받아와 회원가입시 아이디 중복체크와 로그인 시 없는ID체크를 구현했다.
+                                    </p>
+                                </div>
+                                <a href="https://cgv.netlify.com/register" target="_blank" rel="noopener noreferrer"
+                                    class="projects-modal-image-web__wrap">
+                                    <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550602824/cgv-join.png"
+                                        alt="CGV movie detail page" class="projects-modal-image-web" />
+                                </a>
+                            </div>
+
+                            <div class="projects-modal-role">
+                                <a href="https://cgv.netlify.com/movies/detail/3" target="_blank"
+                                    rel="noopener noreferrer" class="projects-modal-image-web__wrap">
+                                    <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550603602/cgv-movie-detail.png"
+                                        alt="CGV movie detail page" class="projects-modal-image-web" />
+                                </a>
+                                <div class="projects-modal__text-wrap">
+                                    <p class="projects-modal__text even bold">
+                                        <span class="projects-modal__tag">개인</span>
+                                        페이지네이션
+                                    </p>
+                                    <p class="projects-modal__text even">
+                                        영화 상세 정보를 서버에서 비동기 통신으로 받아와 화면에 그렸다.<br />
+                                        줄거리에 포함된 다양한 문법들을 기준으로 개행해주어 사용자가 읽기 쉽게 구현했다.<br />
+                                        많은 스틸컷들은 사용자가 직접 넘겨볼 수 있도록 캐러셀 라이브러리를 이용했다.
+                                    </p>
+                                    <p class="projects-modal__text even">
+                                        예매하기 버튼을 누르면 영화 id를 query String으로 넘겨서 해당 영화가 선택된 예약페이지로 바로 넘어가도록 구현했다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="projects-modal-role">
+                                <div class="projects-modal__text-wrap">
+                                    <p class="projects-modal__text odd bold">
+                                        <span class="projects-modal__tag">개인</span>
+                                        주문내역 보기
+                                    </p>
+                                    <p class="projects-modal__text odd">
+                                        회원가입Form에 제어되는 컴포넌트를 이용해 비밀번호 확인란 일치 여부를 판단했다.
+                                    </p>
+                                    <p class="projects-modal__text odd">
+                                        회원가입을 하면 새로운 token을 할당받고, 로그인하면 서버로부터 token을 받아와 localStorage에 저장해 사용자가 서비스를 이용할
+                                        수
+                                        있게 구현했다.
+                                    </p>
+                                    <p class="projects-modal__text odd">
+                                        서버의 user list를 받아와 회원가입시 아이디 중복체크와 로그인 시 없는ID체크를 구현했다.
+                                    </p>
+                                </div>
+                                <a href="https://cgv.netlify.com/register" target="_blank" rel="noopener noreferrer"
+                                    class="projects-modal-image-web__wrap">
+                                    <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto:eco/v1550602824/cgv-join.png"
+                                        alt="CGV movie detail page" class="projects-modal-image-web" />
+                                </a>
+                            </div>
+
+                        </div>
                         <span class="projects-modal-mall__close">&times;</span>
                     </div>
                 </div>
@@ -342,8 +480,8 @@
                 <span class="activity-title__bar"></span>
             </h2>
             <article class="activity-activity">
-                <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto/v1550601893/siots.jpg" alt=""
-                    class="activity-image">
+                <img src="https://res.cloudinary.com/westfolio/image/upload/q_auto/v1550601893/siots.jpg"
+                    alt="siots study" class="activity-image">
                 <div class="activity-content">
                     <div class="activity-subtitle">
                         <h3 class="activity-subtitle__text">Siots Study</h3>
@@ -352,7 +490,7 @@
                     <div class="activity-detail">
                         <p class="activity-detail__text">프론트엔드 개발자의 꿈을 가진 4명이 함께하는 개발 스터디</p>
                         <p class="activity-detail__text">JavaScript를 시작으로 프론트엔드에 관련된 지식들을 함께 공부하고 있다.
-                            우리는 기본적인 문법뿐만 아니라 프레임워크, 클린 코드, 성능 최적화 등등 다양한 주제에 관심이 많다.</p>
+                            Siots는 기본적인 문법뿐만 아니라 프레임워크, 웹 접근성, 성능 최적화 등등 다양한 주제에 관심이 많다.</p>
                         <p class="activity-detail__text"> GitLab에 스터디 자료를 정리하고, Trello로 스터디 스케줄을 관리하며 진행하고 있다.</p>
                     </div>
                     <ul class="activity-links">
