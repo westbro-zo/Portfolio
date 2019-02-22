@@ -233,13 +233,14 @@
                 padding: 2rem;
             }
 
-            .cgv-mvp__wrap, .cgv-tech__wrap, .cgv-role__wrap{
+            .cgv-mvp__wrap, .cgv-tech__wrap, .cgv-role__wrap,
+            .mall-mvp__wrap, .mall-tech__wrap, .mall-role__wrap{
                 // border: 1px solid red;
                 @include respond-to("small"){
                     max-height: 0;
                     overflow: hidden;
                     border-bottom: 1px solid #ddd;
-                    transition: max-height 2s;
+                    transition: all 2s;
                 }
             }
         }
@@ -369,13 +370,5 @@
 
 
 .give-max-height{
-    // animation: slide2 1.5s ease forwards;
-    max-height: 9999px !important;
-    // border: 1px solid blue;
-}
-
-.give-height{
-    height: 100%;
-    overflow: visible;
-    // color: red;
+    max-height: fit-content !important;
 }

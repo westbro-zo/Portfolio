@@ -365,11 +365,12 @@
         width: 100%;
         padding: 2rem; } }
     @media (max-width: 768px) {
-      .projects-modal-content .cgv-mvp__wrap, .projects-modal-content .cgv-tech__wrap, .projects-modal-content .cgv-role__wrap {
+      .projects-modal-content .cgv-mvp__wrap, .projects-modal-content .cgv-tech__wrap, .projects-modal-content .cgv-role__wrap,
+      .projects-modal-content .mall-mvp__wrap, .projects-modal-content .mall-tech__wrap, .projects-modal-content .mall-role__wrap {
         max-height: 0;
         overflow: hidden;
         border-bottom: 1px solid #ddd;
-        transition: max-height 2s; } }
+        transition: all 2s; } }
   .projects-modal-temp {
     width: 50%; }
     @media (max-width: 768px) {
@@ -477,11 +478,7 @@
     transform: translateY(0); } }
 
 .give-max-height {
-  max-height: 9999px !important; }
-
-.give-height {
-  height: 100%;
-  overflow: visible; }
+  max-height: fit-content !important; }
 
 .activity {
   padding: 60px 0;
@@ -789,7 +786,7 @@ a {
   box-shadow: 3px 1px 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #f4f4f4; }
 
-.noscroll {
+.stop-scrolling {
   overflow: hidden; }
 
 @keyframes more-moving {

@@ -23,6 +23,13 @@ const mallMore = mallImage.querySelector('.image-cover-mall__btn');
 const mallModal = document.querySelector('.projects-modal-mall');
 const mallClose = mallModal.querySelector('.projects-modal-mall__close');
 
+const mallMvp = mallModal.querySelector('.mall-mvp');
+const mallTech = mallModal.querySelector('.mall-tech');
+const mallRole = mallModal.querySelector('.mall-role');
+const mallMvpWrap = mallModal.querySelector('.mall-mvp__wrap');
+const mallTechWrap = mallModal.querySelector('.mall-tech__wrap');
+const mallRoleWrap = mallModal.querySelector('.mall-role__wrap');
+
 
 // go top
 goTop.addEventListener("mouseenter", function () {
@@ -58,30 +65,36 @@ mallImage.addEventListener("mouseleave", function () {
 cgvMore.addEventListener("click", function (e) {
     e.preventDefault();
     cgvModal.classList.add('slide-animate');
-    disableScrolling();
+    document.body.classList.add('stop-scrolling');
+    // disableScrolling();
 })
 cgvClose.addEventListener("click", function () {
+    cgvTechWrap.classList.remove('give-max-height');
+    cgvRoleWrap.classList.remove('give-max-height');
+    cgvMvpWrap.classList.remove('give-max-height');
     cgvModal.classList.remove('slide-animate');
-    enableScrolling();
+    document.body.classList.remove('stop-scrolling');
+    // enableScrolling();
 })
 
 mallMore.addEventListener("click", function (e) {
     e.preventDefault();
     mallModal.classList.add('slide-animate');
-    disableScrolling();
+    document.body.classList.add('stop-scrolling');
 })
 mallClose.addEventListener("click", function () {
     mallModal.classList.remove('slide-animate');
-    enableScrolling();
+    document.body.classList.remove('stop-scrolling');
 })
 
+// cgv 모달 컨텐트
 cgvMvp.addEventListener("click", function () {
     viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     if (viewportWidth > 768) {
     } else {
         cgvMvpWrap.classList.toggle('give-max-height');
-        // cgvTechWrap.classList.remove('slide-animate2');
-        // cgvRoleWrap.classList.remove('slide-animate2');
+        cgvTechWrap.classList.remove('give-max-height');
+        cgvRoleWrap.classList.remove('give-max-height');
         // cgvMvpWrap.classList.toggle('give-height');
     }
 })
@@ -91,8 +104,8 @@ cgvTech.addEventListener("click", function () {
     if (viewportWidth > 768) {
     } else {
         cgvTechWrap.classList.toggle('give-max-height');
-        // cgvMvpWrap.classList.remove('slide-animate2');
-        // cgvRoleWrap.classList.remove('slide-animate2');
+        cgvMvpWrap.classList.remove('give-max-height');
+        cgvRoleWrap.classList.remove('give-max-height');
         // cgvMvpWrap.classList.toggle('give-height');
     }
 })
@@ -102,8 +115,42 @@ cgvRole.addEventListener("click", function () {
     if (viewportWidth > 768) {
     } else {
         cgvRoleWrap.classList.toggle('give-max-height');
-        // cgvMvpWrap.classList.remove('slide-animate2');
-        // cgvTechWrap.classList.remove('slide-animate2');
+        cgvMvpWrap.classList.remove('give-max-height');
+        cgvTechWrap.classList.remove('give-max-height');
+        // cgvMvpWrap.classList.toggle('give-height');
+    }
+})
+
+// mall 모달 컨텐트
+mallMvp.addEventListener("click", function () {
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+    } else {
+        mallMvpWrap.classList.toggle('give-max-height');
+        mallTechWrap.classList.remove('give-max-height');
+        mallRoleWrap.classList.remove('give-max-height');
+        // cgvMvpWrap.classList.toggle('give-height');
+    }
+})
+
+mallTech.addEventListener("click", function () {
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+    } else {
+        mallTechWrap.classList.toggle('give-max-height');
+        mallMvpWrap.classList.remove('give-max-height');
+        mallRoleWrap.classList.remove('give-max-height');
+        // cgvMvpWrap.classList.toggle('give-height');
+    }
+})
+
+mallRole.addEventListener("click", function () {
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    if (viewportWidth > 768) {
+    } else {
+        mallRoleWrap.classList.toggle('give-max-height');
+        mallMvpWrap.classList.remove('give-max-height');
+        mallTechWrap.classList.remove('give-max-height');
         // cgvMvpWrap.classList.toggle('give-height');
     }
 })
@@ -120,15 +167,15 @@ document.addEventListener("scroll", function () {
 })
 
 // scroll 막기
-function disableScrolling() {
-    var x = window.scrollX;
-    var y = window.scrollY;
-    window.onscroll = function () { window.scrollTo(x, y); };
-}
-// scroll 허용
-function enableScrolling() {
-    window.onscroll = function () { };
-}
+// function disableScrolling() {
+//     var x = window.scrollX;
+//     var y = window.scrollY;
+//     window.onscroll = function () { window.scrollTo(x, y); };
+// }
+// // scroll 허용
+// function enableScrolling() {
+//     window.onscroll = function () { };
+// }
 
 
 

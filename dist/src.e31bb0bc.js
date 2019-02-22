@@ -124,7 +124,13 @@ var mallImage = document.querySelector('.projects-image-mall');
 var mallCover = mallImage.querySelector('.image-cover-mall');
 var mallMore = mallImage.querySelector('.image-cover-mall__btn');
 var mallModal = document.querySelector('.projects-modal-mall');
-var mallClose = mallModal.querySelector('.projects-modal-mall__close'); // go top
+var mallClose = mallModal.querySelector('.projects-modal-mall__close');
+var mallMvp = mallModal.querySelector('.mall-mvp');
+var mallTech = mallModal.querySelector('.mall-tech');
+var mallRole = mallModal.querySelector('.mall-role');
+var mallMvpWrap = mallModal.querySelector('.mall-mvp__wrap');
+var mallTechWrap = mallModal.querySelector('.mall-tech__wrap');
+var mallRoleWrap = mallModal.querySelector('.mall-role__wrap'); // go top
 
 goTop.addEventListener("mouseenter", function () {
   goTopSign.style.display = "block";
@@ -156,46 +162,78 @@ mallImage.addEventListener("mouseleave", function () {
 cgvMore.addEventListener("click", function (e) {
   e.preventDefault();
   cgvModal.classList.add('slide-animate');
-  disableScrolling();
+  document.body.classList.add('stop-scrolling'); // disableScrolling();
 });
 cgvClose.addEventListener("click", function () {
+  cgvTechWrap.classList.remove('give-max-height');
+  cgvRoleWrap.classList.remove('give-max-height');
+  cgvMvpWrap.classList.remove('give-max-height');
   cgvModal.classList.remove('slide-animate');
-  enableScrolling();
+  document.body.classList.remove('stop-scrolling'); // enableScrolling();
 });
 mallMore.addEventListener("click", function (e) {
   e.preventDefault();
   mallModal.classList.add('slide-animate');
-  disableScrolling();
+  document.body.classList.add('stop-scrolling');
 });
 mallClose.addEventListener("click", function () {
   mallModal.classList.remove('slide-animate');
-  enableScrolling();
-});
+  document.body.classList.remove('stop-scrolling');
+}); // cgv 모달 컨텐트
+
 cgvMvp.addEventListener("click", function () {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (viewportWidth > 768) {} else {
-    cgvMvpWrap.classList.toggle('give-max-height'); // cgvTechWrap.classList.remove('slide-animate2');
-    // cgvRoleWrap.classList.remove('slide-animate2');
-    // cgvMvpWrap.classList.toggle('give-height');
+    cgvMvpWrap.classList.toggle('give-max-height');
+    cgvTechWrap.classList.remove('give-max-height');
+    cgvRoleWrap.classList.remove('give-max-height'); // cgvMvpWrap.classList.toggle('give-height');
   }
 });
 cgvTech.addEventListener("click", function () {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (viewportWidth > 768) {} else {
-    cgvTechWrap.classList.toggle('give-max-height'); // cgvMvpWrap.classList.remove('slide-animate2');
-    // cgvRoleWrap.classList.remove('slide-animate2');
-    // cgvMvpWrap.classList.toggle('give-height');
+    cgvTechWrap.classList.toggle('give-max-height');
+    cgvMvpWrap.classList.remove('give-max-height');
+    cgvRoleWrap.classList.remove('give-max-height'); // cgvMvpWrap.classList.toggle('give-height');
   }
 });
 cgvRole.addEventListener("click", function () {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (viewportWidth > 768) {} else {
-    cgvRoleWrap.classList.toggle('give-max-height'); // cgvMvpWrap.classList.remove('slide-animate2');
-    // cgvTechWrap.classList.remove('slide-animate2');
-    // cgvMvpWrap.classList.toggle('give-height');
+    cgvRoleWrap.classList.toggle('give-max-height');
+    cgvMvpWrap.classList.remove('give-max-height');
+    cgvTechWrap.classList.remove('give-max-height'); // cgvMvpWrap.classList.toggle('give-height');
+  }
+}); // mall 모달 컨텐트
+
+mallMvp.addEventListener("click", function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (viewportWidth > 768) {} else {
+    mallMvpWrap.classList.toggle('give-max-height');
+    mallTechWrap.classList.remove('give-max-height');
+    mallRoleWrap.classList.remove('give-max-height'); // cgvMvpWrap.classList.toggle('give-height');
+  }
+});
+mallTech.addEventListener("click", function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (viewportWidth > 768) {} else {
+    mallTechWrap.classList.toggle('give-max-height');
+    mallMvpWrap.classList.remove('give-max-height');
+    mallRoleWrap.classList.remove('give-max-height'); // cgvMvpWrap.classList.toggle('give-height');
+  }
+});
+mallRole.addEventListener("click", function () {
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+  if (viewportWidth > 768) {} else {
+    mallRoleWrap.classList.toggle('give-max-height');
+    mallMvpWrap.classList.remove('give-max-height');
+    mallTechWrap.classList.remove('give-max-height'); // cgvMvpWrap.classList.toggle('give-height');
   }
 }); // 헤더 바 그림자
 
@@ -208,21 +246,16 @@ document.addEventListener("scroll", function () {
     header.classList.add("box-shadow-add");
   }
 }); // scroll 막기
-
-function disableScrolling() {
-  var x = window.scrollX;
-  var y = window.scrollY;
-
-  window.onscroll = function () {
-    window.scrollTo(x, y);
-  };
-} // scroll 허용
-
-
-function enableScrolling() {
-  window.onscroll = function () {};
-} // 이스터에그
-
+// function disableScrolling() {
+//     var x = window.scrollX;
+//     var y = window.scrollY;
+//     window.onscroll = function () { window.scrollTo(x, y); };
+// }
+// // scroll 허용
+// function enableScrolling() {
+//     window.onscroll = function () { };
+// }
+// 이스터에그
 
 console.log('%c          ', 'font-size: 100px; background: url(https://media.giphy.com/media/3ndAvMC5LFPNMCzq7m/giphy.gif) no-repeat; background-size: contain;');
 console.log("I know you'll like me ♡");
@@ -253,7 +286,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58045" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60274" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

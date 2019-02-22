@@ -227,10 +227,11 @@ a{
     background-color: $base-sub-color;
 }
 
-.noscroll{
-    overflow:hidden;
-}
 
+.stop-scrolling {
+    // height: 100%;
+    overflow: hidden;
+}
 
 @keyframes more-moving {
     0% {
