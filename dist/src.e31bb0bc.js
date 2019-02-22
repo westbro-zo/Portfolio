@@ -175,27 +175,27 @@ cgvMvp.addEventListener("click", function () {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (viewportWidth > 768) {} else {
-    cgvMvpWrap.classList.toggle('slide-animate2');
-    cgvTechWrap.classList.remove('slide-animate2');
-    cgvRoleWrap.classList.remove('slide-animate2'); // cgvMvpWrap.classList.toggle('give-height');
+    cgvMvpWrap.classList.toggle('give-max-height'); // cgvTechWrap.classList.remove('slide-animate2');
+    // cgvRoleWrap.classList.remove('slide-animate2');
+    // cgvMvpWrap.classList.toggle('give-height');
   }
 });
 cgvTech.addEventListener("click", function () {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (viewportWidth > 768) {} else {
-    cgvTechWrap.classList.toggle('slide-animate2');
-    cgvMvpWrap.classList.remove('slide-animate2');
-    cgvRoleWrap.classList.remove('slide-animate2'); // cgvMvpWrap.classList.toggle('give-height');
+    cgvTechWrap.classList.toggle('give-max-height'); // cgvMvpWrap.classList.remove('slide-animate2');
+    // cgvRoleWrap.classList.remove('slide-animate2');
+    // cgvMvpWrap.classList.toggle('give-height');
   }
 });
 cgvRole.addEventListener("click", function () {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
   if (viewportWidth > 768) {} else {
-    cgvRoleWrap.classList.toggle('slide-animate2');
-    cgvMvpWrap.classList.remove('slide-animate2');
-    cgvTechWrap.classList.remove('slide-animate2'); // cgvMvpWrap.classList.toggle('give-height');
+    cgvRoleWrap.classList.toggle('give-max-height'); // cgvMvpWrap.classList.remove('slide-animate2');
+    // cgvTechWrap.classList.remove('slide-animate2');
+    // cgvMvpWrap.classList.toggle('give-height');
   }
 }); // 헤더 바 그림자
 
@@ -253,7 +253,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57667" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58045" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

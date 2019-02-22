@@ -79,9 +79,9 @@ cgvMvp.addEventListener("click", function () {
     viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     if (viewportWidth > 768) {
     } else {
-        cgvMvpWrap.classList.toggle('slide-animate2');
-        cgvTechWrap.classList.remove('slide-animate2');
-        cgvRoleWrap.classList.remove('slide-animate2');
+        cgvMvpWrap.classList.toggle('give-max-height');
+        // cgvTechWrap.classList.remove('slide-animate2');
+        // cgvRoleWrap.classList.remove('slide-animate2');
         // cgvMvpWrap.classList.toggle('give-height');
     }
 })
@@ -90,9 +90,9 @@ cgvTech.addEventListener("click", function () {
     viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     if (viewportWidth > 768) {
     } else {
-        cgvTechWrap.classList.toggle('slide-animate2');
-        cgvMvpWrap.classList.remove('slide-animate2');
-        cgvRoleWrap.classList.remove('slide-animate2');
+        cgvTechWrap.classList.toggle('give-max-height');
+        // cgvMvpWrap.classList.remove('slide-animate2');
+        // cgvRoleWrap.classList.remove('slide-animate2');
         // cgvMvpWrap.classList.toggle('give-height');
     }
 })
@@ -101,9 +101,9 @@ cgvRole.addEventListener("click", function () {
     viewportWidth = window.innerWidth || document.documentElement.clientWidth;
     if (viewportWidth > 768) {
     } else {
-        cgvRoleWrap.classList.toggle('slide-animate2');
-        cgvMvpWrap.classList.remove('slide-animate2');
-        cgvTechWrap.classList.remove('slide-animate2');
+        cgvRoleWrap.classList.toggle('give-max-height');
+        // cgvMvpWrap.classList.remove('slide-animate2');
+        // cgvTechWrap.classList.remove('slide-animate2');
         // cgvMvpWrap.classList.toggle('give-height');
     }
 })

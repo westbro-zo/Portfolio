@@ -296,7 +296,8 @@
     flex-direction: column; }
   .projects-modal-title {
     font-size: 1.7rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    text-align: center; }
   .projects-modal-subtitle {
     font-size: 1.4rem;
     margin: 3rem 0 1rem 0;
@@ -367,7 +368,8 @@
       .projects-modal-content .cgv-mvp__wrap, .projects-modal-content .cgv-tech__wrap, .projects-modal-content .cgv-role__wrap {
         max-height: 0;
         overflow: hidden;
-        border-bottom: 1px solid #ddd; } }
+        border-bottom: 1px solid #ddd;
+        transition: max-height 2s; } }
   .projects-modal-temp {
     width: 50%; }
     @media (max-width: 768px) {
@@ -474,16 +476,8 @@
     opacity: 1;
     transform: translateY(0); } }
 
-@keyframes slide2 {
-  0% {
-    max-height: 0; }
-  50% {
-    max-height: 100%; }
-  100% {
-    max-height: fit-content; } }
-
-.slide-animate2 {
-  animation: slide2 1.5s ease forwards; }
+.give-max-height {
+  max-height: 9999px !important; }
 
 .give-height {
   height: 100%;
