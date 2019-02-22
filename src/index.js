@@ -83,6 +83,9 @@ mallMore.addEventListener("click", function (e) {
     document.body.classList.add('stop-scrolling');
 })
 mallClose.addEventListener("click", function () {
+    mallTechWrap.classList.remove('give-max-height');
+    mallRoleWrap.classList.remove('give-max-height');
+    mallMvpWrap.classList.remove('give-max-height');
     mallModal.classList.remove('slide-animate');
     document.body.classList.remove('stop-scrolling');
 })
