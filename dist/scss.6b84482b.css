@@ -285,9 +285,17 @@
         color: black; }
       @media (max-width: 768px) {
         .projects-modal-cgv__close, .projects-modal-mall__close {
+          position: fixed;
+          display: none;
           padding: 0.2rem 1rem;
-          top: 0;
-          right: 0; } }
+          top: unset;
+          right: 50%;
+          bottom: 1rem;
+          margin-right: -1.7rem;
+          text-align: center;
+          color: #fff;
+          border: 1px solid #fff;
+          border-radius: 2rem; } }
   .projects-modal-header {
     margin-bottom: 1.5rem;
     display: flex;
@@ -361,9 +369,10 @@
     overflow-y: scroll; }
     @media (max-width: 768px) {
       .projects-modal-content {
-        height: 80%;
         width: 100%;
-        padding: 2rem; } }
+        height: 85%;
+        padding: 2rem;
+        margin-bottom: 2rem; } }
     @media (max-width: 768px) {
       .projects-modal-content .cgv-mvp__wrap, .projects-modal-content .cgv-tech__wrap, .projects-modal-content .cgv-role__wrap,
       .projects-modal-content .mall-mvp__wrap, .projects-modal-content .mall-tech__wrap, .projects-modal-content .mall-role__wrap {
@@ -510,7 +519,7 @@
   .activity-activity {
     display: flex;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 45px;
     width: 100%; }
     @media (max-width: 768px) {
       .activity-activity {
@@ -518,7 +527,7 @@
   .activity .first {
     margin-top: 0.5rem; }
   .activity-image {
-    width: 40%;
+    width: 35%;
     height: 100%;
     margin: 0.5rem 0;
     box-shadow: 3px 1px 10px 0 rgba(0, 0, 0, 0.1); }
@@ -528,7 +537,7 @@
         margin-top: 0;
         margin-bottom: 1rem; } }
   .activity-content {
-    width: 60%;
+    width: 65%;
     margin-left: 30px;
     display: flex;
     flex-direction: column;

@@ -66,6 +66,7 @@ cgvMore.addEventListener("click", function (e) {
     e.preventDefault();
     cgvModal.classList.add('slide-animate');
     document.body.classList.add('stop-scrolling');
+    cgvClose.style.display = "block";
     // disableScrolling();
 })
 cgvClose.addEventListener("click", function () {
@@ -74,6 +75,7 @@ cgvClose.addEventListener("click", function () {
     cgvMvpWrap.classList.remove('give-max-height');
     cgvModal.classList.remove('slide-animate');
     document.body.classList.remove('stop-scrolling');
+    cgvClose.style.display = "none";
     // enableScrolling();
 })
 
@@ -81,6 +83,7 @@ mallMore.addEventListener("click", function (e) {
     e.preventDefault();
     mallModal.classList.add('slide-animate');
     document.body.classList.add('stop-scrolling');
+    mallClose.style.display = "block";
 })
 mallClose.addEventListener("click", function () {
     mallTechWrap.classList.remove('give-max-height');
@@ -88,6 +91,7 @@ mallClose.addEventListener("click", function () {
     mallMvpWrap.classList.remove('give-max-height');
     mallModal.classList.remove('slide-animate');
     document.body.classList.remove('stop-scrolling');
+    mallClose.style.display = "none";
 })
 
 // cgv 모달 컨텐트

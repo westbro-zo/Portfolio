@@ -145,10 +145,17 @@
                 }
 
                 @include respond-to("small"){
+                    position: fixed;
+                    display: none;
                     padding: 0.2rem 1rem;
-                    top: 0;
-                    right: 0;
-                    // border: 1px solid red;
+                    top: unset;
+                    right: 50%;
+                    bottom: 1rem;
+                    margin-right: -1.7rem;
+                    text-align: center;
+                    color: $white;
+                    border: 1px solid $white;
+                    border-radius: 2rem;
                 }
             }
         }
@@ -228,9 +235,10 @@
             overflow: auto;
             overflow-y: scroll;
             @include respond-to("small"){
-                height: 80%;
                 width: 100%;
+                height: 85%;
                 padding: 2rem;
+                margin-bottom: 2rem;
             }
 
             .cgv-mvp__wrap, .cgv-tech__wrap, .cgv-role__wrap,

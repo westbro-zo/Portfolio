@@ -14,7 +14,7 @@
         // border: 1px solid red;
         display: flex;
         justify-content: space-between;
-        margin-top: $ele-gap;
+        margin-top: $ele-gap * 1.5;
         width: 100%;
         @include respond-to("small"){
             flex-direction: column;
@@ -24,7 +24,7 @@
         margin-top: 0.5rem;
     }
     &-image{
-        width: 40%;
+        width: 35%;
         height: 100%;
         margin: 0.5rem 0;
         box-shadow: $common-box-shadow;
@@ -35,7 +35,7 @@
         }
     }
     &-content{
-        width: 60%;
+        width: 65%;
         margin-left: $ele-gap;
         // border: 1px solid red;
         display: flex;

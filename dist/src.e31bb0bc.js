@@ -162,19 +162,22 @@ mallImage.addEventListener("mouseleave", function () {
 cgvMore.addEventListener("click", function (e) {
   e.preventDefault();
   cgvModal.classList.add('slide-animate');
-  document.body.classList.add('stop-scrolling'); // disableScrolling();
+  document.body.classList.add('stop-scrolling');
+  cgvClose.style.display = "block"; // disableScrolling();
 });
 cgvClose.addEventListener("click", function () {
   cgvTechWrap.classList.remove('give-max-height');
   cgvRoleWrap.classList.remove('give-max-height');
   cgvMvpWrap.classList.remove('give-max-height');
   cgvModal.classList.remove('slide-animate');
-  document.body.classList.remove('stop-scrolling'); // enableScrolling();
+  document.body.classList.remove('stop-scrolling');
+  cgvClose.style.display = "none"; // enableScrolling();
 });
 mallMore.addEventListener("click", function (e) {
   e.preventDefault();
   mallModal.classList.add('slide-animate');
   document.body.classList.add('stop-scrolling');
+  mallClose.style.display = "block";
 });
 mallClose.addEventListener("click", function () {
   mallTechWrap.classList.remove('give-max-height');
@@ -182,6 +185,7 @@ mallClose.addEventListener("click", function () {
   mallMvpWrap.classList.remove('give-max-height');
   mallModal.classList.remove('slide-animate');
   document.body.classList.remove('stop-scrolling');
+  mallClose.style.display = "none";
 }); // cgv 모달 컨텐트
 
 cgvMvp.addEventListener("click", function () {
@@ -289,7 +293,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56858" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57642" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
