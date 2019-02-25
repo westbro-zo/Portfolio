@@ -510,11 +510,13 @@
   .activity-activity {
     display: flex;
     justify-content: space-between;
-    margin: 0.5rem 0;
+    margin-top: 30px;
     width: 100%; }
     @media (max-width: 768px) {
       .activity-activity {
         flex-direction: column; } }
+  .activity .first {
+    margin-top: 0.5rem; }
   .activity-image {
     width: 40%;
     height: 100%;
@@ -553,7 +555,7 @@
     border: 0;
     cursor: auto;
     position: relative;
-    top: -2px; }
+    top: -4px; }
     @media (max-width: 768px) {
       .activity-date {
         font-size: 0.7rem;

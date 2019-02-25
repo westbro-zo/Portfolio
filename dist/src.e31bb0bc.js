@@ -177,6 +177,9 @@ mallMore.addEventListener("click", function (e) {
   document.body.classList.add('stop-scrolling');
 });
 mallClose.addEventListener("click", function () {
+  mallTechWrap.classList.remove('give-max-height');
+  mallRoleWrap.classList.remove('give-max-height');
+  mallMvpWrap.classList.remove('give-max-height');
   mallModal.classList.remove('slide-animate');
   document.body.classList.remove('stop-scrolling');
 }); // cgv 모달 컨텐트
@@ -286,7 +289,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60274" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56858" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

@@ -14,11 +14,14 @@
         // border: 1px solid red;
         display: flex;
         justify-content: space-between;
-        margin: 0.5rem 0;
+        margin-top: $ele-gap;
         width: 100%;
         @include respond-to("small"){
             flex-direction: column;
         }
+    }
+    .first{
+        margin-top: 0.5rem;
     }
     &-image{
         width: 40%;
@@ -57,7 +60,7 @@
         // border: 1px solid red;
         @include date-style{
             position: relative;
-            top: -2px;
+            top: -4px;
         };
     }
     &-detail{
