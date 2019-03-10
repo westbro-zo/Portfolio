@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.html",
     "scripts": {
-        "start": "parcel src/index.html --open",
+        "start": "parcel --host 0.0.0.0 src/index.html --open",
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rimraf dist && parcel build src/index.html"
     },
