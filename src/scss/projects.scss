@@ -66,12 +66,12 @@
                     padding-right: 5px;
                     color: #ccc;
                 }
-                &:last-child{
-                    @include date-style;
-                    &::before{
-                        display: none;
-                    }
-                }
+                // &:last-child{
+                //     @include date-style;
+                //     &::before{
+                //         display: none;
+                //     }
+                // }
             }
         }
     }

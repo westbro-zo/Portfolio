@@ -205,26 +205,6 @@
         content: "#";
         padding-right: 5px;
         color: #ccc; }
-      .projects-basic-info .techs-item:last-child {
-        display: inline-block;
-        background-color: #85b8d5;
-        padding: 2px 6px;
-        margin-left: 10px;
-        color: #fff;
-        font-size: 0.8rem;
-        font-weight: normal;
-        border-radius: 3px;
-        height: auto;
-        line-height: normal;
-        box-shadow: none;
-        border: 0;
-        cursor: auto; }
-        @media (max-width: 768px) {
-          .projects-basic-info .techs-item:last-child {
-            font-size: 0.7rem;
-            padding: 0 4px; } }
-        .projects-basic-info .techs-item:last-child::before {
-          display: none; }
   .projects-image-cgv, .projects-image-mall {
     position: relative;
     width: 100%;
